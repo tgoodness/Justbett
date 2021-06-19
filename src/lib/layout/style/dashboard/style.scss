@@ -1,0 +1,66 @@
+@import "../../../color/color.scss";
+
+.page-wrapper{
+  border: 1px solid $faint-color;
+  padding-bottom: 0px;
+}
+
+.side-bar{
+  border-right: 1px solid $faint-color;
+  margin-top: -10px;
+  padding-top: 15px;
+  
+} 
+
+.main-page-wrapper{
+  padding: 0 20px;
+}
+
+
+
+.page-heading{
+  padding: 15px 20px;
+  font-weight: 500;
+  background-color: #F5F5F5;
+  color: $blue-color;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.main-page{
+  // border: 1px solid $faint-color;
+  padding-top: 10px;
+}
+
+
+#scroll-view {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  overflow-y: scroll !important;
+}
+
+#scroll-view::-webkit-scrollbar {
+  width: 5px;
+}
+
+#scroll-view::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#scroll-view::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+}
+
+
+//responsive
+@media screen and (max-width: 768px) {
+ .p-none{
+   padding-left: 0 !important;
+    padding-right: 0 !important;
+ }
+
+ .main-page-wrapper{
+  padding: 0;
+}
+
+}

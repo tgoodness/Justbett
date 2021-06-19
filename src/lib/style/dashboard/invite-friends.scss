@@ -1,0 +1,18 @@
+@import "../../color/color.scss";
+.wrapper{
+	border-bottom: 1px solid $faint-color;
+	padding: 10px 20px;
+	text-align: center;
+	img{
+		margin-bottom: 30px;
+	}
+	div{
+		border: 1.5px solid $black-color;
+		text-align: center;
+		padding: 7px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		
+	}
+}
+

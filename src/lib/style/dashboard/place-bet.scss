@@ -1,0 +1,64 @@
+@import "../../color/color.scss";
+.place-bet{
+    padding: 10px 20px;
+}
+
+.prediction {
+    label {
+        color: $grey-color;
+        margin-bottom: 25px;
+    }
+}
+
+.check-wrapper {
+    display: flex;
+    align-items: center;
+
+}
+
+.teamA {
+    display: flex;
+    align-items: center;
+
+    .checked {
+        border: 1px solid #DDDDDD;
+        padding: 7px 15px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .unchecked{
+        color: transparent;
+    }
+}
+
+.teamB {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+
+    .checked {
+        border: 1px solid #DDDDDD;
+        padding: 7px 15px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+     .unchecked{
+        color: transparent;
+    }
+}
+
+.win-info{
+    font-size: 13px;
+    color: $grey-color;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    svg{
+        color: $black-color;
+    margin-right: 5px;
+    }
+    
+}
+

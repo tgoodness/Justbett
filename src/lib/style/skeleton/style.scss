@@ -1,0 +1,129 @@
+.MuiSkeleton-pulse {
+    transform: scale(1, 0.85) !important;
+}
+
+.trade {
+    .switch {
+        display: flex;
+        justify-content: flex-end;
+
+        .MuiSkeleton-root {
+            width: 50px !important;
+            height: 40px !important;
+            margin-right: 10px;
+        }
+    }
+
+    .btn-trade {
+        display: flex;
+        justify-content: center !important;
+        margin-top: 50px;
+
+        .MuiSkeleton-root {
+            width: 170px !important;
+            margin-right: 10px;
+        }
+    }
+}
+
+.p2p {
+    .skeleton-group {
+        display: flex;
+        margin-top: 10px;
+
+        .MuiSkeleton-root {
+            width: 50px !important;
+            height: 55px !important;
+            margin-right: 10px;
+
+        }
+
+        .rect {
+            width: 100% !important;
+        }
+
+        .circle {
+            height: 50px;
+            width: 60px !important;
+        }
+    }
+
+
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch-control {
+    display: flex;
+    justify-content: space-between;
+
+    .MuiSkeleton-root {
+        width: 100% !important;
+        height: 20px !important;
+        margin-right: 10px;
+    }
+}
+
+.place-order {
+    .switch {
+        display: flex;
+        justify-content: space-between;
+
+        .MuiSkeleton-root {
+            width: 50px !important;
+            height: 45px !important;
+            margin-right: 10px;
+
+        }
+
+    }
+
+    .btn-trade {
+        display: flex;
+        justify-content: center !important;
+        margin-top: 50px;
+
+        .MuiSkeleton-root {
+            width: 170px !important;
+            margin-right: 10px;
+        }
+    }
+}
+
+
+.wallet-address {
+    .img-wrapper {
+        display: flex;
+        justify-content: center !important;
+
+        .img {
+            width: 150px;
+            height: 150px;
+
+        }
+    }
+}
+
+.profile {
+    .img-wrapper {
+        display: flex;
+        justify-content: center !important;
+
+        .img {
+            width: 138px;
+            height: 160px;
+
+        }
+
+        margin-bottom:5px !important;
+    }
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center !important;
+    margin-top: 50px;
+}

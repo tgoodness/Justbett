@@ -1,0 +1,92 @@
+@import "./lib/color//color.scss";
+
+.text-field legend {
+	float: none !important;
+}
+
+.text-field {
+	width: 100% !important;
+	margin-bottom: 15px !important;
+}
+
+.MuiOutlinedInput-input {
+	padding-top: 14.5px !important;
+	padding-bottom: 14.5px !important;
+}
+
+.text-field label {
+	top: -4px !important;
+}
+
+.text-field label[data-shrink="true"] {
+	top: 0;
+}
+
+.MuiDialogActions-root {
+	padding-bottom: 20px !important;
+	padding-right: 20px !important;
+	.MuiButton-label {
+		text-transform: capitalize !important;
+	}
+
+	button:first-child {
+		color: $black-color;
+		font-weight: 600 !important;
+	}
+
+	button:last-child {
+		background-color: $primary-color !important;
+		color: $white-color;
+	}
+}
+
+.Mui-disabled input {
+	color: #3a3a3a;
+}
+
+.MuiButton-textSecondary {
+	color: $primary-color !important;
+}
+
+.ant-picker {
+	width: 100% !important;
+	border: none !important;
+	border-bottom: 1.7px solid #c3c3c3 !important;
+  padding-bottom: 10px;
+	&:hover,
+	&:focus {
+		border-bottom: 2px solid $black-color !important;
+		outline: none !important;
+	}
+
+
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.btn-black {
+	background-color: $black-color;
+	color: $white-color;
+	text-transform: capitalize !important;
+	font-size: 14px;
+	box-shadow: none !important;
+	margin-bottom: 10px;
+	padding: 12px;
+	&:hover {
+		color: $white-color;
+	}
+}
+
+.btn-outlined-black {
+	color: $black-color;
+	text-transform: capitalize !important;
+	font-size: 14px;
+	background: transparent !important;
+	border: 2px solid $black-color;
+	box-shadow: none !important;
+	&:hover {
+		color: $black-color;
+	}
+}

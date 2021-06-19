@@ -1,0 +1,54 @@
+@import "../../../color/color.scss";
+
+.page-wrapper{
+  border: 1px solid $faint-color;
+}
+
+.page-title {
+  color: $black-color !important;
+  font-weight: 700 !important;
+  flex-grow: 1 !important;
+  font-size: 16px !important;
+}
+
+.menu-icon{
+  color: $black-color;
+}
+
+.menu-items{
+  .MuiPopover-paper{
+    width: 250px !important;
+    margin-top: 43px;
+    margin-left: -10px;
+    padding-right: 20px;
+  }
+
+  a{
+    color: $grey-color !important;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  
+}
+
+.pending-game-badge{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  
+  .MuiBadge-colorSecondary{
+    background-color: $blue-color !important;
+  }
+}
+
+
+
+
+.appbar {
+  margin-bottom: 10px;
+  box-shadow: none !important;
+  border-bottom: 1px solid $faint-color;
+  background-color: transparent !important;
+ 
+}

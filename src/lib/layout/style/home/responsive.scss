@@ -1,0 +1,22 @@
+@import "../../../color/color.scss";
+@media (max-width: 767px){
+    .app-logo{
+        width: 80px;
+    }
+
+    .home{
+        .heading{
+            margin-top: 20px;
+            font-size: 30px;
+        }
+
+    .sub-heading{
+        font-size: 20px;
+            }
+        }
+
+    .onboard-image{
+        display: none !important;
+    }
+}
+

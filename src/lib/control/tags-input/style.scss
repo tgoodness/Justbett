@@ -1,0 +1,96 @@
+@import "../../color/color.scss";
+/* Example Styles for React Tags*/
+
+div.ReactTags__tags {
+    position: relative;
+    border-bottom: 1.7px solid #C3C3C3;
+
+
+      &:hover,&:focus{
+       border-bottom: 2px solid $black-color !important;
+    }
+  
+}
+
+/* Styles for the input */
+div.ReactTags__tagInput {
+    width: 180px;
+    border-radius: 2px;
+    display: inline-block;
+}
+div.ReactTags__tagInput input.ReactTags__tagInputField,
+div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+    height: 31px;
+    margin: 0;
+    font-size: 12px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 0 4px;
+}
+
+/* Styles for selected tags */
+div.ReactTags__selected span.ReactTags__tag {
+    border: 1px solid $blue-color;
+    background: transparent;
+    font-size: 12px;
+    display: inline-block;
+    padding: 5px 2px 5px 7px;
+    margin: 0 5px;
+    cursor: move;
+    border-radius: 2px;
+    color: $blue-color;
+    margin-bottom: 5px;
+
+    button{
+      border: none !important;
+      border-radius: 10px !important;
+      background-color: $faint-color;
+      margin-left: 5px;
+      color: $black-color;
+    }
+
+
+
+  
+}
+
+.ReactTags__selected span:first-child{
+   border: 1px solid $black-color !important;
+    color: $black-color !important;
+    padding: 5px 8px !important;
+  
+   button{
+      border: none !important;
+      border-radius: 10px !important;
+      background-color: $faint-color;
+      margin-left: 5px;
+      color: $black-color;
+      display: none;
+    }
+}
+
+/* Styles for suggestions */
+div.ReactTags__suggestions {
+    position: absolute;
+}
+div.ReactTags__suggestions ul {
+    list-style-type: none;
+    box-shadow: .05em .01em .5em rgba(0,0,0,.2);
+    background: white;
+    width: 200px;
+}
+div.ReactTags__suggestions li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 0;
+}
+div.ReactTags__suggestions li mark {
+    text-decoration: underline;
+    background: none;
+    font-weight: 600;
+}
+div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+    background: #b7cfe0;
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+@import "../../color/color.scss";
+
+.games {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid $faint-color;
+	padding: 10px 20px;
+    margin-bottom: 10px;
+	
+	&:hover {
+        background-color: $faint-color;
+		cursor: pointer;
+    }
+}
+
+.package-details {
+	display: flex;
+	align-items: center !important;
+	img {
+		margin-right: 10px;
+	}
+	h5 {
+		font-size: 18px;
+		color: $black-color;
+		margin-bottom: 5px;
+		margin-top: 10px;
+	}
+	h6 {
+		color: $grey-color;
+		font-weight: normal !important;
+		font-size: 12px !important;
+	}
+}
+
+.team-details {
+	h5 {
+		font-size: 15px;
+		color: $black-color !important;
+		font-weight: 600; 
+		margin-top: 10px;
+        text-align: right;
+	}
+}
+
+.teams {
+	display: flex;
+	align-items: center;
+	.team-name {
+		color: $grey-color;
+		font-weight: 600;
+		font-size: 12px;
+		img {
+			margin-right: 3px;
+		}
+	}
+
+	.selected {
+		color: $black-color;
+	}
+}
