@@ -4,37 +4,37 @@
  * Akinyemi Tobiloba
  */
 const Botmecash = {
-  isEmail(str) {
+  isEmail (str) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(str).toLowerCase());
   },
 
-  isPhoneNumber(str) {
-    return str.length === 11 && (str.charAt(2) === "0" || str.charAt(2) === "1")
+  isPhoneNumber (str) {
+    return str.length === 11 && (str.charAt(2) === '0' || str.charAt(2) === '1')
       ? true
       : false;
   },
 
-  isUrl(str) {
+  isUrl (str) {
     var pattern = new RegExp(
-      "^(https?:\\/\\/)?" + // protocol
-      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query str
-      "(\\#[-a-z\\d_]*)?$",
-      "i"
+      '^(https?:\\/\\/)?' + // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query str
+      '(\\#[-a-z\\d_]*)?$',
+      'i'
     ); // fragment locator
     return !!pattern.test(str);
   },
 
 
-  randomNumber(to =10000) {
+  randomNumber (to = 10000) {
     return Math.floor(Math.random() * to);
   },
 
 
-  numberFormat(number, decimals, dec_point, thousands_sep) {
+  numberFormat (number, decimals, dec_point, thousands_sep) {
     // http://kevin.vanzonneveld.net
     // +   original by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
     // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
@@ -81,38 +81,40 @@ const Botmecash = {
     // *    returns 12: '1.200'
     var n = !isFinite(+number) ? 0 : +number,
       prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
-      sep = typeof thousands_sep === "undefined" ? "," : thousands_sep,
-      dec = typeof dec_point === "undefined" ? "." : dec_point,
+      sep = typeof thousands_sep === 'undefined' ? ',' : thousands_sep,
+      dec = typeof dec_point === 'undefined' ? '.' : dec_point,
       toFixedFix = function (n, prec) {
         // Fix for IE parseFloat(0.55).toFixed(0) = 0;
         var k = Math.pow(10, prec);
         return Math.round(n * k) / k;
       },
-      s = (prec ? toFixedFix(n, prec) : Math.round(n)).toString().split(".");
-    if (s[0].length > 3) {
-      s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+      s = (prec ? toFixedFix(n, prec) : Math.round(n)).toString().split('.');
+    if (s[ 0 ].length > 3)
+    {
+      s[ 0 ] = s[ 0 ].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
     }
-    if ((s[1] || "").length < prec) {
-      s[1] = s[1] || "";
-      s[1] += new Array(prec - s[1].length + 1).join("0");
+    if ((s[ 1 ] || '').length < prec)
+    {
+      s[ 1 ] = s[ 1 ] || '';
+      s[ 1 ] += new Array(prec - s[ 1 ].length + 1).join('0');
     }
     return s.join(dec);
   },
 
-  dateFormat(dateString) {
+  dateFormat (dateString) {
     const dt = new Date(dateString);
-    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    let months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec' ];
 
     let day = dt.getDate();
-    day = day < 10 ? "0" + day : day;
+    day = day < 10 ? '0' + day : day;
 
-    months = months[dt.getMonth()]
+    months = months[ dt.getMonth() ];
     const year = dt.getFullYear();
 
     return `${months} ${day}, ${year}`;
   },
 
-  timeFormat(dateString) {
+  timeFormat (dateString) {
     const date = new Date(dateString);
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -127,17 +129,17 @@ const Botmecash = {
 
 
 
-  isEmptyObj(value) {
+  isEmptyObj (value) {
     return Object.keys(value).length === 0 && value.constructor === Object
       ? false
       : true;
   },
 
-  isArr(value) {
+  isArr (value) {
     return value.length > 0 && value !== undefined ? true : false;
   },
 
-  isStrongPassword(str) {
+  isStrongPassword (str) {
     return str.match(
       /(?=^.{8,32}$)(?=(?:.*?\d){1})(?=.*[a-z])(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%*()_+^&]*$/
     )
@@ -145,8 +147,9 @@ const Botmecash = {
       : false;
   },
 
-  setItem(key, value, json = false) {
-    try {
+  setItem (key, value, json = false) {
+    try
+    {
       if (json) localStorage.setItem(key, JSON.stringify(value));
       else localStorage.setItem(key, value);
     } catch {
@@ -154,8 +157,9 @@ const Botmecash = {
     }
   },
 
-  getItem(key, json = false) {
-    try {
+  getItem (key, json = false) {
+    try
+    {
       if (json) return JSON.parse(localStorage.getItem(key));
       else return localStorage.getItem(key);
     } catch {
@@ -163,44 +167,47 @@ const Botmecash = {
     }
   },
 
-  requestError(error) {
-    if (error.response) {
+  requestError (error) {
+    if (error.response)
+    {
       return error.response.data.message;
-    } else {
+    } else
+    {
       return error.message;
     }
   },
 
-  millisToTime(millis) {
+  millisToTime (millis) {
     var minutes = Math.floor(millis / 60000);
     var seconds = ((millis % 60000) / 1000).toFixed(0);
     return seconds === 60
-      ? minutes + 1 + ":00"
-      : minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+      ? minutes + 1 + ':00'
+      : minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   },
-  formatTitle() {
+  formatTitle () {
     let title = window.location.pathname;
 
-    title = title.replace("/", "");
-    title = title.replace("-", " ");
-    title = this.split(title, "/")[1];
+    title = title.replace('/', '');
+    title = title.replace('-', ' ');
+    title = this.split(title, '/')[ 1 ];
     title = this.capitalize(title);
     return title;
   },
-  capitalize(str) {
-    var splitStr = str.toLowerCase().split(" ");
-    for (var i = 0; i < splitStr.length; i++) {
-      splitStr[i] =
-        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+  capitalize (str) {
+    var splitStr = str.toLowerCase().split(' ');
+    for (var i = 0; i < splitStr.length; i++)
+    {
+      splitStr[ i ] =
+        splitStr[ i ].charAt(0).toUpperCase() + splitStr[ i ].substring(1);
     }
-    return splitStr.join(" ");
+    return splitStr.join(' ');
   },
 
-  wordEllipsis(text, length = 20) {
-    return text.length > length ? text.substring(0, 15) + "..." : text;
+  wordEllipsis (text, length = 20) {
+    return text.length > length ? text.substring(0, 15) + '...' : text;
   },
 
-  getDocumentHeight() {
+  getDocumentHeight () {
     // let scrollHeight = Math.max(
     //   document.body.scrollHeight,
     //   document.documentElement.scrollHeight,
@@ -211,19 +218,21 @@ const Botmecash = {
     // );
     return Math.max(window.innerHeight);
   },
-  hexToRgbA(hex) {
+  hexToRgbA (hex) {
     var c;
-    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-      c = hex.substring(1).split("");
-      if (c.length === 3) {
-        c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex))
+    {
+      c = hex.substring(1).split('');
+      if (c.length === 3)
+      {
+        c = [ c[ 0 ], c[ 0 ], c[ 1 ], c[ 1 ], c[ 2 ], c[ 2 ] ];
       }
-      c = "0x" + c.join("");
+      c = '0x' + c.join('');
       return (
-        "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") + ",0.2)"
+        'rgba(' + [ (c >> 16) & 255, (c >> 8) & 255, c & 255 ].join(',') + ',0.2)'
       );
     }
-    throw new Error("Bad Hex");
+    throw new Error('Bad Hex');
   },
 };
 

@@ -1,0 +1,29 @@
+@import "../../color/color.scss";
+
+.update-bank {
+    .existing-details {
+        background-image: url('../../assets/background/update-bank.svg');
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        background-size: cover;
+        background-position: bottom;
+        padding: 20px;
+
+        h5 {
+            font-weight: 600;
+            color: $white-color;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            h6 {
+                color: $white-color;
+            }
+        }
+    }
+}

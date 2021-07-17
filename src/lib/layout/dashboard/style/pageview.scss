@@ -1,0 +1,53 @@
+@import "../../../color/color.scss";
+
+.main-page-wrapper {
+  padding: 0 20px;
+  
+}
+
+
+
+.page-heading {
+  padding: 15px 20px;
+  font-weight: 600;
+  background-color: #F5F5F5;
+  color: $black-color;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: 700;
+}
+
+.side-bar {
+  border-right: 1px solid $faint-color;
+  margin-top: -10px;
+  padding-top: 15px;
+
+}
+
+
+#scrollbar {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  overflow-y: scroll !important;
+}
+
+#scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+}
+
+
+@media screen and (max-width: 768px) {
+  .p-none {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+}

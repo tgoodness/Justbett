@@ -1,19 +1,19 @@
-import React from "react";
-import { Route, Redirect, useLocation } from "react-router-dom";
+import React from 'react';
+import { Route, Redirect, useLocation } from 'react-router-dom';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const location = useLocation();
   //const isLoggedIn = localStorage.getItem("auth");
-  const isLoggedIn = "user";
+  const isLoggedIn = 'user';
 
   return (
     <Route
-      {...rest}
-      render={(props) =>
+      { ...rest }
+      render={ (props) =>
         isLoggedIn ? (
-          <Component {...props} />
+          <Component { ...props } />
         ) : (
-          <Redirect to={{ pathname: "/", state: { from: location } }} />
+          <Redirect to={ { pathname: '/', state: { from: location } } } />
         )
       }
     />

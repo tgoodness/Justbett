@@ -1,10 +1,10 @@
-import React from "react";
-import { Input } from "@material-ui/core";
-import InputLabel from "@material-ui/core/InputLabel";
-import FormControl from "@material-ui/core/FormControl";
+import React from 'react';
+import { Input } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
 
 
-export default function InputImage(props) {
+export default function InputImage (props) {
 	const {
 		value,
 		icon,
@@ -15,13 +15,13 @@ export default function InputImage(props) {
 			<InputLabel htmlFor="join-game-type">Type</InputLabel>
 			<Input
 				type="text"
-				value={value}
+				value={ value }
 				label="Type"
 				id="join-game-type"
 				name="type"
-				disabled={true}
+				disabled={ true }
 				startAdornment={
-					<img src={icon} alt="Package Logo" width="15" className="mr-1" />
+					<img src={ icon } alt="Package Logo" width="15" className="mr-1" />
 				}
 				autoComplete="off"
 			/>

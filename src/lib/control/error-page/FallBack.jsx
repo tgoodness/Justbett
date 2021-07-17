@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import './style.scss';
 
-function FallBack() {
+function FallBack () {
   return (
     <div className="fallback">
       <img src="/app-logo.png" alt="Loader" width="50" />

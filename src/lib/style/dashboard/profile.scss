@@ -1,0 +1,103 @@
+@import "../../color/color.scss";
+
+.profile {
+    padding: 10px 20px;
+
+    .image-wrapper {
+        margin-top: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        div {
+
+            img {
+                border-radius: 100px;
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        h5 {
+            color: $blue-color;
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-weight: 600;
+            cursor: pointer;
+
+        }
+
+        h6 {
+            color: $grey-color;
+
+            svg {
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .data-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        box-shadow: 1px 3px 10px rgba(79, 79, 79, 0.15);
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 7px;
+
+        h6 {
+            margin-bottom: 0;
+            color: $grey-color;
+            font-weight: normal;
+            font-size: 13px;
+        }
+
+        h5 {
+            margin-bottom: 0;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+
+    .edit-btn {
+        span {
+            background-color: $black-color;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: $white-color;
+            cursor: pointer;
+        }
+
+        .default {
+            background-color: #DDDDDD;
+            color: $white-color;
+            cursor: context-menu;
+
+        }
+    }
+
+    .gender-wrapper {
+        .MuiFormControlLabel-root {
+            border-bottom: 1px solid $faint-color !important;
+            margin-left: 0;
+            margin-right: 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .form-wrapper {
+        h6 {
+            color: $grey-color;
+        }
+
+        .cancel-btn {
+            margin-top: 20px;
+            text-align: center;
+            color: $red-color;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Pageview from "../../lib/layout/home/HomePageview";
-import "../../lib/style/home/home.scss";
+import Pageview from '../../lib/layout/home/HomePageview';
+import '../../lib/style/home/home.scss';
 
-import slide1 from "../../lib/assets/home/slide2.svg";
-import ball from "../../lib/assets/home/ball.png";
+import slide1 from '../../lib/assets/home/slide2.svg';
+import ball from '../../lib/assets/home/ball.png';
 
-import facebook from "../../lib/assets/home/social-icons/facebook.png";
-import instagram from "../../lib/assets/home/social-icons/instagram.png";
-import gmail from "../../lib/assets/home/social-icons/gmail.png";
-import twitter from "../../lib/assets/home/social-icons/twitter.png";
+import facebook from '../../lib/assets/home/social-icons/facebook.png';
+import instagram from '../../lib/assets/home/social-icons/instagram.png';
+import gmail from '../../lib/assets/home/social-icons/gmail.png';
+import twitter from '../../lib/assets/home/social-icons/twitter.png';
 
 function Home() {
   return (

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import { Avatar } from "@material-ui/core";
-import MenuItems from "./MenuItems";
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { Avatar } from '@material-ui/core';
+import SideMenu from './SideMenu';
+import AccountMenu from './AccountMenu';
+import './style/header.scss';
 
-import userImage from "../../assets/avater.jfif";
-import "../style/dashboard/header.scss";
-
+import UserPhoto from '../../assets/avater.jfif';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function Header({ title }) {
+function Header ({ title }) {
 	const classes = useStyles();
 
-	const [anchorEl, setAnchorEl] = useState(null);
+	const [ anchorEl, setAnchorEl ] = useState(null);
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
 	};
@@ -32,28 +32,38 @@ function Header({ title }) {
 		setAnchorEl(null);
 	};
 
+
+	const [ anchorElA, setAnchorElA ] = useState(null);
+	const handleClickA = (event) => {
+		setAnchorElA(event.currentTarget);
+	};
+	const handleCloseA = () => {
+		setAnchorElA(null);
+	};
+
 	return (
-		<div className={classes.root}>
+		<div className={ classes.root }>
 			<AppBar position="static" className="appbar">
 				<Toolbar>
 					<IconButton
 						edge="start"
-						className={classes.menuButton}
+						className={ classes.menuButton }
 						color="inherit"
 						aria-label="menu"
-						onClick={handleClick}>
+						onClick={ handleClick }>
 						<MenuIcon className="menu-icon" />
 					</IconButton>
 					<Typography variant="h6" className="page-title">
 						<span className="d-none d-md-block">JustBett</span>
-						<span className="d-md-none">{title}</span>
+						<span className="d-md-none">{ title }</span>
 					</Typography>
-					<Avatar>
-						<img src={userImage} alt="User Image" className="img-fluid" />
+					<Avatar onClick={ handleClickA }>
+						<img src={ UserPhoto } alt="User Avater" className="img-fluid" />
 					</Avatar>
 				</Toolbar>
 			</AppBar>
-			<MenuItems anchorEl={anchorEl} handleClose={handleClose} />
+			<SideMenu anchorEl={ anchorEl } handleClose={ handleClose } />
+			<AccountMenu anchorEl={ anchorElA } handleClose={ handleCloseA } />
 		</div>
 	);
 }

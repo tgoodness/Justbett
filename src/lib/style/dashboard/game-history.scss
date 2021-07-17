@@ -1,88 +1,162 @@
 @import "../../color/color.scss";
 
-.pending-games{
-	a:hover{
-		text-decoration: none !important;
-	}
-}
-.game {
-	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid $faint-color;
-    margin-bottom: 10px;
- 	padding: 10px 20px;
+.pending-games-page {
+    padding: 0 15px 15px 15px;
 
-    &:hover {
-        background-color: $faint-color;
-		cursor: pointer;
+    .page-background {
+        background-image: url('../../assets/background/game-history.svg');
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-size: cover;
+        background-position: top;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3 {
+            text-align: right;
+            padding-right: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            svg {
+                background-color: $white-color;
+                padding: 5px;
+                font-size: 35px;
+                border-radius: 50px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        div {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px 5px 20px;
+
+            h5 {
+                color: $black-color;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            h6 {
+                color: $grey-color;
+                font-weight: normal;
+
+            }
+        }
     }
-	
-}
+
+    a:hover {
+        text-decoration: none !important;
+    }
 
 
-.team-details {
-	h6 {
-		font-size: 12px;
-		color: $grey-color !important;
-		margin-top: 10px;
+    .game {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $faint-color;
+        margin-bottom: 10px;
+        padding: 10px 20px;
 
-	}
+        &:hover {
+            background-color: $faint-color;
+            cursor: pointer;
+        }
 
-	.won{
-		color: $green-color;
-	}
-	.lose{
-		color: $red-color;
-	}
-	.pending{
-		color: $grey-color;
-	}
-}
+    }
 
-.teams {
-	display: flex;
-	align-items: center;
-	.team-name {
-		color: $grey-color;
-		font-weight: 600;
-		font-size: 12px;
-		img {
-			margin-right: 3px;
+
+    .team-details {
+        h6 {
+            font-size: 12px;
+            color: $grey-color !important;
+            margin-top: 10px;
+        }
+
+        .won {
+            color: $green-color;
+        }
+
+        .lose {
+            color: $red-color;
+        }
+
+        .pending {
+            color: $grey-color;
+        }
+    }
+
+    .teams {
+        display: flex;
+        align-items: center;
+
+        .team-name {
+            color: $grey-color;
+            font-weight: 700;
+            font-size: 13px;
+
+            img {
+                margin-right: 3px;
+            }
+        }
+
+        .selected {
+            color: $black-color;
+        }
+
+        .separator {
+            color: $grey-color !important;
+        }
+    }
+
+    .color-chosen {
+		img{
+			margin-right: 10px;
 		}
-	}
+        span {
+            color: $grey-color;
+            font-weight: 700;
+            font-size: 13px;
+        }
+    }
 
-	.selected {
-		color: $black-color;
-	}
-	.separator{
-		color: $grey-color !important;
-	}
-}
+    .package-details {
+        display: flex;
+        align-items: center !important;
 
+        img {
+            margin-right: 10px;
+        }
 
-.package-details {
-	display: flex;
-	align-items: center !important;
+        h6 {
+            font-size: 13px;
+            color: $grey-color;
+            color: $black-color;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            font-weight: 500;
+            text-align: right;
+        }
 
-	img {
-		margin-right: 10px;
-	}
-	h5 {
-		font-size: 15px;
-		color: $black-color;
-		margin-bottom: 5px;
-		margin-top: 10px;
-	}
-	h6 {
-		color: $grey-color;
-		font-weight: normal !important;
-		font-size: 12px !important;
-		text-align: right;
-		margin-right: 10px !important;
-	 .MuiBadge-colorSecondary{
-    background-color: $grey-color !important;
-	
-  }
-	}
+        h5 {
+            color: $black-color;
+            font-weight: 600 !important;
+            font-size: 15px !important;
+            text-align: right;
+            margin-right: 10px !important;
 
+            .MuiBadge-colorSecondary {
+                background-color: $black-color !important;
+
+            }
+        }
+
+    }
 }

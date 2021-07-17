@@ -1,7 +1,7 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
-import Info from "@material-ui/icons/Info";
-export default function Input(props) {
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import Info from '@material-ui/icons/Info';
+export default function Input (props) {
   const {
     label,
     value,
@@ -19,24 +19,24 @@ export default function Input(props) {
     <TextField
       className="text-field"
       variant="outlined"
-      label={label}
-      type={type}
-      disabled={disabled}
-      value={value}
-      onChange={onChange}
-      {...rest}
-      {...(error && {
+      label={ label }
+      type={ type }
+      disabled={ disabled }
+      value={ value }
+      onChange={ onChange }
+      { ...rest }
+      { ...(error && {
         error: true,
         helperText: (
-          <span style={{ color: "#f93154" }}>
-            <Info style={{ fontSize: "15px" }} />
+          <span style={ { color: '#f93154' } }>
+            <Info style={ { fontSize: '15px' } } />
             &nbsp;
-            {helperText}
+            { helperText }
           </span>
         ),
-      })}
-      {...(multiline && { multiline: true })}
-      rows={row}
+      }) }
+      { ...(multiline && { multiline: true }) }
+      rows={ row }
     />
   );
 }

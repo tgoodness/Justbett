@@ -1,11 +1,11 @@
 const auth = {
   login: (cb) => {
-    localStorage.setItem("auth", "user");
+    localStorage.setItem('auth', 'user');
     cb();
   },
   logout: (cb) => {
-    localStorage.setItem("auth", "");
-    localStorage.removeItem("user");
+    localStorage.setItem('auth', '');
+    localStorage.removeItem('user');
     cb();
   },
 };

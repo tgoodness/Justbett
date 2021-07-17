@@ -1,0 +1,54 @@
+@import "../../color/color.scss";
+
+.activities {
+   
+.filter-icon-wrapper{
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+    .activity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 15px;
+        margin-bottom: 10px;
+
+        &:hover {
+            background-color: $faint-color;
+        }
+
+    }
+
+    .icon-wrapper {
+        display: flex;
+        align-items: center;
+
+        svg {
+            background-color: $black-color;
+            padding: 10px;
+            font-size: 40px;
+            color: $faint-color;
+            border-radius: 50px;
+            margin-right: 15px;
+        }
+
+        div {
+            margin-top: 10px;
+
+            h5 {
+                margin-bottom: 5px;
+                font-size: 15px;
+                color: $black-color;
+            }
+
+            h6 {
+                font-size: 13px;
+                color: gray;
+                font-weight: normal;
+            }
+        }
+    }
+}

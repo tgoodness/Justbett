@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "./Header";
-import "../style/home/pageview.scss";
+import React from 'react';
+import Header from './Header';
+import './style/pageview.scss';
 
-import yellowRibbon from "../../assets/home/yellow-ribbon.png";
-import blackRibbon from "../../assets/home/black-ribbon.png";
+import yellowRibbon from '../../assets/home/yellow-ribbon.png';
+import blackRibbon from '../../assets/home/black-ribbon.png';
 
-function PageView({ children }) {
+function PageView ({ children }) {
   return (
     <div className="home">
       <div className="container">
@@ -13,11 +13,11 @@ function PageView({ children }) {
       </div>
       <div>
         <div className="text-right">
-          <img src={yellowRibbon} alt="Yellow Ribbon" />
+          <img src={ yellowRibbon } alt="Yellow Ribbon" />
         </div>
-        <div className="container">{children}</div>
+        <div className="container">{ children }</div>
         <div className="ribbon">
-          <img src={blackRibbon} alt="Black Ribbon" />
+          <img src={ blackRibbon } alt="Black Ribbon" />
         </div>
       </div>
     </div>

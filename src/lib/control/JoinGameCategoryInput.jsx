@@ -1,13 +1,11 @@
-import React from "react";
-import IconButton from "@material-ui/core/IconButton";
-import { Input } from "@material-ui/core";
-import InputLabel from "@material-ui/core/InputLabel";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControl from "@material-ui/core/FormControl";
-import Info from "@material-ui/icons/Info";
+import React from 'react';
 
-export default function JoinGameTypeInput(props) {
+import { Input } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+
+
+export default function JoinGameTypeInput (props) {
 	const {
 		value,
 	} = props;
@@ -17,11 +15,11 @@ export default function JoinGameTypeInput(props) {
 			<InputLabel htmlFor="join-game-category">Category</InputLabel>
 			<Input
 				type="text"
-				value={value}
+				value={ value }
 				label="Category"
 				id="join-game-category"
 				name="cetegory"
-				disabled={true}
+				disabled={ true }
 			/>
 		</FormControl>
 	);

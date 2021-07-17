@@ -1,7 +1,7 @@
-import React from "react";
-import Pageview from "../../lib/layout/home/Pageview";
-import "../../lib/style/home/about.scss";
-import aboutUs from "../../lib/assets/home/about-us.svg";
+import React from 'react';
+import Pageview from '../../lib/layout/home/Pageview';
+import '../../lib/style/home/about.scss';
+import aboutUs from '../../lib/assets/home/about-us.svg';
 
 function About() {
 	return (

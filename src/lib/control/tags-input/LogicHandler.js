@@ -1,19 +1,19 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-function LogicHandler() {
-const KeyCodes = {
-	comma: 188,
-	enter: 13,
-	spaceBar: 32,
-};
-const delimiters = [KeyCodes.comma, KeyCodes.enter, KeyCodes.spaceBar];
+function LogicHandler () {
+	const KeyCodes = {
+		comma: 188,
+		enter: 13,
+		spaceBar: 32,
+	};
+	const delimiters = [ KeyCodes.comma, KeyCodes.enter, KeyCodes.spaceBar ];
 
 
-   const initialState = {
-		tags: [{ id: "goodness", text: "You" }],
+	const initialState = {
+		tags: [ { id: 'goodness', text: 'You' } ],
 	};
 
-	const [state, setState] = useState(initialState);
+	const [ state, setState ] = useState(initialState);
 
 	const handleDelete = (i) => {
 		const { tags } = state;
@@ -24,11 +24,11 @@ const delimiters = [KeyCodes.comma, KeyCodes.enter, KeyCodes.spaceBar];
 	};
 
 	const handleAddition = (tag) => {
-		setState((state) => ({ tags: [...state.tags, tag] }));
+		setState((state) => ({ tags: [ ...state.tags, tag ] }));
 	};
 
 	const handleDrag = (tag, currPos, newPos) => {
-		const tags = [...state.tags];
+		const tags = [ ...state.tags ];
 		const newTags = tags.slice();
 
 		newTags.splice(currPos, 1);
@@ -41,8 +41,8 @@ const delimiters = [KeyCodes.comma, KeyCodes.enter, KeyCodes.spaceBar];
 	const { tags } = state;
 
 
-    return [tags, delimiters, handleDelete, handleAddition, handleDrag ];
+	return [ tags, delimiters, handleDelete, handleAddition, handleDrag ];
 
 }
 
-export default LogicHandler
+export default LogicHandler;
