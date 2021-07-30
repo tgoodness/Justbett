@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import './style/pageview.scss';
+ import './style/pageview.scss';
 
 import yellowRibbon from '../../assets/home/yellow-ribbon.png';
 import blackRibbon from '../../assets/home/black-ribbon.png';

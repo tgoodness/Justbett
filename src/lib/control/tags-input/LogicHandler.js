@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
-function LogicHandler () {
+function LogicHandler() {
+	
 	const KeyCodes = {
 		comma: 188,
 		enter: 13,
 		spaceBar: 32,
 	};
-	const delimiters = [ KeyCodes.comma, KeyCodes.enter, KeyCodes.spaceBar ];
 
+	const delimiters = [ KeyCodes.comma, KeyCodes.enter, KeyCodes.spaceBar ];
 
 	const initialState = {
 		tags: [ { id: 'goodness', text: 'You' } ],

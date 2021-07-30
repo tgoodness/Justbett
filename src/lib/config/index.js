@@ -5,8 +5,6 @@ import PrivateRoute from './PrivateRoute';
 import FallBack from '../control/error-page//FallBack';
 import useWindowSize from '../service/UseWindowSize';
 
-
-
 const Home = lazy(() => import('../../components/home/Home'));
 const About = lazy(() => import('../../components/home/About'));
 const Contact = lazy(() => import('../../components/home/contact/Contact'));
@@ -29,42 +27,61 @@ const Activities = lazy(() => import('../../components/dashboard/activities/Acti
 const InviteFriends = lazy(() => import('../../components/dashboard/invite-friends/InviteFriends'));
 const Settings = lazy(() => import('../../components/dashboard/settings/Settings'));
 const Profile = lazy(() => import('../../components/dashboard/profile/Profile'));
-import Wallet from '../../components/dashboard/wallet/Wallet';
+const Wallet = lazy(() => import('../../components/dashboard/wallet/Wallet'));
+
+//Iclass group
+const JoinGroup = lazy(() => import('../../components/dashboard/group/join-group/JoinGroup'));
+const GroupInfo = lazy(() => import('../../components/dashboard/group/group-info/GroupInfo'));
+const GroupPlaceBetSoccer = lazy(() =>
+  import('../../components/dashboard/group/place-bet/soccer/PlaceBet')
+);
+const GroupPlaceBetColor = lazy(() =>
+  import('../../components/dashboard/group/place-bet/color/PlaceBet')
+);
+const PlayStation = lazy(() => import('../../components/dashboard/group/play-station/PlayStation'));
+
 const PageNotFound = lazy(() => import('../../lib/control/error-page/PageNotFound'));
 
-function Index () {
+function Index() {
   //Switch viewport
-  const [ width ] = useWindowSize();
+  const [width] = useWindowSize();
   const GameComponent = width < 767 ? ActiveGames : Dashboard;
 
   return (
-    <Suspense fallback={ <FallBack /> }>
+    <Suspense fallback={<FallBack />}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={ Home } />
-          <Route exact path="/about" component={ About } />
-          <Route exact path="/contact" component={ Contact } />
-          <Route exact path="/register" component={ Register } />
-          <Route exact path="/login" component={ Login } />
-          <Route exact path="/forgot-password" component={ ForgotPassword } />
-          <Route exact path="/reset-password" component={ ResetPassword } />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/forgot-password" component={ForgotPassword} />
+          <Route exact path="/reset-password" component={ResetPassword} />
 
-          <PrivateRoute path="/dashboard" component={ Dashboard } />
-          <PrivateRoute path="/active-games" component={ GameComponent } />
-          <PrivateRoute path="/games" component={ Games } />
-          <PrivateRoute path="/place-bet/soccer/:groupId?" component={ PlaceBetSoccer } />
-          <PrivateRoute path="/place-bet/color/:groupId?" component={ PlaceBetColor } />
-          <PrivateRoute path="/pending-games" component={ PendingGames } />
-          <PrivateRoute path="/game-history" component={ GameHistory } />
-          <PrivateRoute path="/game-details/:groupId" component={ GameDetails } />
+          <PrivateRoute path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/active-games" component={GameComponent} />
+          <PrivateRoute path="/games" component={Games} />
+          <PrivateRoute path="/place-bet/soccer/:groupId?" component={PlaceBetSoccer} />
+          <PrivateRoute path="/place-bet/color/:groupId?" component={PlaceBetColor} />
+          <PrivateRoute path="/pending-games" component={PendingGames} />
+          <PrivateRoute path="/game-history" component={GameHistory} />
+          <PrivateRoute path="/game-details/:groupId" component={GameDetails} />
 
-          <PrivateRoute path="/withdraw" component={ Withdraw } />
-          <PrivateRoute path="/activities" component={ Activities } />
-          <PrivateRoute path="/invite-friends" component={ InviteFriends } />
-          <PrivateRoute path="/settings" component={ Settings } />
-          <PrivateRoute path="/profile" component={ Profile } />
-          <PrivateRoute path="/wallet" component={ Wallet } />
-          <PrivateRoute path="/*" component={ PageNotFound } />
+          <PrivateRoute path="/withdraw" component={Withdraw} />
+          <PrivateRoute path="/activities" component={Activities} />
+          <PrivateRoute path="/invite-friends" component={InviteFriends} />
+          <PrivateRoute path="/settings" component={Settings} />
+          <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/wallet" component={Wallet} />
+
+          <PrivateRoute path="/join-group" component={JoinGroup} />
+          <PrivateRoute path="/group-info" component={GroupInfo} />
+          <PrivateRoute path="/group/place-bet/soccer/:groupId" component={GroupPlaceBetSoccer} />
+          <PrivateRoute path="/group/place-bet/color/:groupId" component={GroupPlaceBetColor} />
+          <PrivateRoute path="/group/play-station/:groupId" component={PlayStation} />
+
+          <PrivateRoute path="/*" component={PageNotFound} />
         </Switch>
       </BrowserRouter>
     </Suspense>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Empty } from 'antd';
 import { Link } from 'react-router-dom';
 
+
 import {
 	PlusSquareOutlined,
 	BankOutlined,
@@ -9,7 +10,7 @@ import {
 	RightOutlined,
 } from '@ant-design/icons';
 
-import Pageview from '../../../lib/layout/dashboard/Pageview';
+import Pageview from '../../../lib/layout/dashboard/DashboardPageview';
 import util from '../../../lib/service/utils';
 
 import '../../../lib/style/dashboard/dashboard.scss';

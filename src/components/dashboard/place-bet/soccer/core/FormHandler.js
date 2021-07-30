@@ -16,7 +16,7 @@ function FormHandler() {
 	const categories = [
 		{ id: 3, label: '3 Users', users: 3 },
 		{ id: 5, label: '5 Users', users: 5 },
-		{ id: 10, label: 'Play With Friends', users: '-' },
+		{ id: 10, label: 'Play With Friends', users: 'group' },
 	];
 
 	const groupTypes = [
@@ -118,11 +118,7 @@ function FormHandler() {
 		setType(e.target.value);
 	};
 
-	//if play with friend is selected
-	const [amount, setAmount] = useState('');
-	const handleAmount = (e) => {
-		setAmount(e.target.value);
-	};
+
 
 	const [peerTeams, setPeerTeams] = useState({});
 	const [team, setTeam] = useState('');
@@ -177,8 +173,6 @@ function FormHandler() {
 		handleCategory,
 		type,
 		handleType,
-		amount,
-		handleAmount,
 		team,
 		handleTeam,
 		isJoinGroup,

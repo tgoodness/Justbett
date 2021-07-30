@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 	},
 	menuButton: {
-		marginRight: theme.spacing(2),
+		marginRight: theme.spacing(0),
 	},
 }));
 
@@ -51,7 +51,7 @@ function Header ({ title }) {
 						color="inherit"
 						aria-label="menu"
 						onClick={ handleClick }>
-						<MenuIcon className="menu-icon" />
+						<MenuIcon className="menu-icon"  />
 					</IconButton>
 					<Typography variant="h6" className="page-title">
 						<span className="d-none d-md-block">JustBett</span>

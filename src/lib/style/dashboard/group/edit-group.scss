@@ -1,0 +1,60 @@
+@import '../../../color/color.scss';
+
+.edit-group {
+  .group-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    h5 {
+      span {
+        font-size: 18px;
+        color: $black-color;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    h6 {
+      font-size: 15px;
+      color: $grey-color;
+    }
+
+    div{
+      flex: 1;
+    }
+    .group-name-icon {
+      font-size: 25px;
+      color: $grey-color;
+    }
+  }
+
+  .amount-wrapper {
+    svg {
+      font-size: 25px;
+      color: $grey-color;
+    }
+    input {
+      padding-left: 10px;
+    }
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    margin-top: 20px;
+
+    button {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+}
