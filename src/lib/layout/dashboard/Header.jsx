@@ -58,7 +58,7 @@ function Header ({ title }) {
 						<span className="d-md-none">{ title }</span>
 					</Typography>
 					<Avatar onClick={ handleClickA }>
-						<img src={ UserPhoto } alt="User Avater" className="img-fluid" />
+						<img src={ UserPhoto } alt="User Avater" className="img-fluid user-photo" />
 					</Avatar>
 				</Toolbar>
 			</AppBar>

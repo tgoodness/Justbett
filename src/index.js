@@ -6,6 +6,7 @@ import AOS from 'aos';
 import '@fontsource/mulish';
 import '@fontsource/krona-one';
 import 'aos/dist/aos.css';
+import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
 import './App.scss';

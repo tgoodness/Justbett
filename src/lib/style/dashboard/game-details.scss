@@ -1,160 +1,148 @@
-@import "../../color/color.scss";
+@import '../../color/color.scss';
 
 .game-details {
-    border-bottom: 1px solid $faint-color;
-    margin-bottom: 10px;
-    padding: 10px 20px;
+  padding:  10px;
 
+  .user-position {
+    background-image: url('../../assets/background/game-details.svg');
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: bottom;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $faint-color;
+
+    h5 {
+      font-size: 18px;
+      color: $white-color;
+      font-weight: 700;
+      margin-right: 10px !important;
+
+      .MuiBadge-colorSecondary {
+        background-color: $white-color !important;
+        color: $black-color;
+        font-weight: 600;
+      }
+    }
+
+    h6 {
+      font-size: 15px;
+      color: $faint-color;
+    }
+
+    .winning-details {
+      h5 {
+        font-size: 18px;
+        color: $white-color;
+        font-weight: 700;
+      }
+
+      h6 {
+        font-size: 15px;
+        color: $faint-color;
+        text-align: left;
+        margin-top: 15px;
+
+        span {
+          border: 1px solid $white-color;
+          padding: 5px 10px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+
+  .result-header {
+    font-size: 15px;
+    color: $black-color;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .result {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .user-info {
+      h5 {
+        font-size: 15px;
+        color: #494a5c;
+        margin-bottom: 5px;
+      }
+
+      h6 {
+        font-size: 12px;
+        color: $grey-color;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .winning {
+    text-align: center;
+
+    h5 {
+      font-size: 15px;
+      color: $black-color;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    h6 {
+      color: $grey-color;
+    }
+  }
+
+  .point {
+    text-align: right;
+
+    h5 {
+      font-size: 15px;
+      color: $grey-color;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    h6 {
+      font-size: 12px;
+      color: $grey-color;
+      font-weight: normal;
+    }
+
+    .teams-result {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .selected {
+      color: $black-color;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 10px 20px;
+    h5 {
+      font-size: 15px !important;
+    }
+
+    h6 {
+      font-size: 12px !important;
+    }
 
     .user-position {
-        background-image: url('../../assets/background/game-details.svg');
-        background-repeat: no-repeat;
-        padding: 30px;
-        border-radius: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        background-size: cover;
-        background-position: bottom;
+      padding: 15px;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid $faint-color;
-
-
-        h5 {
-            font-size: 18px;
-            color: $white-color;
-            font-weight: 700;
-            margin-right: 10px !important;
-
-            .MuiBadge-colorSecondary {
-                background-color: $white-color !important;
-                color: $black-color;
-                font-weight: 600;
-            }
-        }
-
-        h6 {
-            font-size: 15px;
-            color: $faint-color;
-        }
-
-
-        .winning-details {
-            h5 {
-                font-size: 18px;
-                color: $white-color;
-                font-weight: 700;
-            }
-
-            h6 {
-                font-size: 15px;
-                color: $faint-color;
-                text-align: left;
-                margin-top: 15px;
-
-                span {
-                    border: 1px solid $white-color;
-                    padding: 5px 10px;
-                    border-radius: 3px;
-                }
-            }
-        }
+      img {
+        width: 80px;
+        height: 80%;
+      }
     }
-
-    .result-header {
-        font-size: 15px;
-        color: $black-color;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-
-    .result {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-
-        .user-info {
-            h5 {
-                font-size: 15px;
-                color: #494A5C;
-                margin-bottom: 5px;
-            }
-
-            h6 {
-                font-size: 12px;
-                color: $grey-color;
-                font-weight: normal;
-            }
-        }
-    }
-
-
-    .winning {
-        text-align: center;
-
-        h5 {
-            font-size: 15px;
-            color: $black-color;
-            margin-bottom: 5px;
-            font-weight: 700;
-        }
-
-        h6 {
-            color: $grey-color;
-        }
-    }
-
-    .point {
-        text-align: right;
-
-        h5 {
-            font-size: 15px;
-            color: $grey-color;
-            margin-bottom: 5px;
-            font-weight: 700;
-        }
-
-        h6 {
-            font-size: 12px;
-            color: $grey-color;
-            font-weight: normal;
-        }
-
-
-        .teams-result {
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-
-        .selected {
-            color: $black-color;
-
-        }
-    }
-
-    @media screen and (max-width: 767px) {
-
-        h5 {
-            font-size: 15px !important;
-        }
-
-        h6 {
-            font-size: 12px !important;
-        }
-
-        .user-position {
-            padding: 15px;
-
-            img {
-                width: 80px;
-                height: 80%;
-            }
-
-        }
-
-
-    }
+  }
 }

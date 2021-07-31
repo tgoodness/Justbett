@@ -17,7 +17,7 @@ import CHE from '../../../lib/assets/clubes/CHE.png';
 function GameDetails () {
 
 	return (
-		<Pageview title="Game Details" data-aos="flip-left">
+		<Pageview title="Game Details">
 			<div className="game-details">
 				<div className="user-position">
 					<div className="package-name">

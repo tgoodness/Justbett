@@ -8,7 +8,7 @@ import Color from '../../../lib/assets/games/color.svg';
 
 function Games () {
     return (
-        <Pageview title="Games" data-aos="flip-left">
+        <Pageview title="Games">
             <div className="games-page">
                 <div className="games">
                     <div className="row">

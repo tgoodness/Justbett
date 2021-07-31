@@ -20,7 +20,7 @@ export default function SimpleSelect (prob) {
 
 	return (
 		<FormControl className="text-field">
-			<InputLabel id="demo-simple-select-helper-label">{ label }</InputLabel>
+			<InputLabel id="demo-simple-select-helper-label">{label}</InputLabel>
 			<Select
 				labelId="demo-simple-select-helper-label"
 				id="demo-simple-select-helper"

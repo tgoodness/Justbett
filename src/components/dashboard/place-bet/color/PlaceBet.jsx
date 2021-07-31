@@ -35,7 +35,7 @@ function PlaceBet() {
   const [visibleA, showModalA, handleCancelA] = addFriendModalHandler();
 
   return (
-    <Pageview title="Place Bet" data-aos="flip-left">
+    <Pageview title="Place Bet" >
       <div className="place-bet-color">
         <div className="page-background">
           <div>

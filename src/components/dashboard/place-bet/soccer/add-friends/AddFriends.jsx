@@ -19,7 +19,7 @@ function Dialog(props) {
     <Modal
       visible={visible}
       onCancel={handleCancel}
-      closable={false}
+      title="Invite friends"
       footer={false}
       centered={true}
       maskClosable={false}
@@ -48,13 +48,9 @@ function Dialog(props) {
               </button>
             </div>
             <div className="col-6">
-              <button className="btn btn-black btn-block">Confirm</button>
+              <button className="btn btn-black btn-block">Create</button>
             </div>
           </div>
-        </div>
-
-        <div className="close-footer">
-          <h6 onClick={handleCancel}>Close</h6>
         </div>
       </div>
     </Modal>

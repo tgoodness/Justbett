@@ -4,15 +4,17 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import { MoreHorizOutlined } from '@material-ui/icons';
+import { MenuOutlined, MoreHorizOutlined } from '@material-ui/icons';
 import { Avatar } from '@material-ui/core';
 
 import GroupMenu from '../group/GroupMenu';
-import '../style/header.scss';
+import SideMenu from '../SideMenu';
 import Diamond from '../../../assets/stones/diamond.png';
+import '../style/header.scss';
 
 function Header(props) {
   const { participants } = props;
+
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -22,12 +24,24 @@ function Header(props) {
     setAnchorEl(null);
   };
 
+  const [anchorElG, setAnchorElG] = useState(null);
+  const handleClickG = (event) => {
+    setAnchorElG(event.currentTarget);
+  };
+
+  const handleCloseG = () => {
+    setAnchorElG(null);
+  };
+
 
   return (
     <div>
       <AppBar position="static" className="appbar">
         <div className="group-page-title-wrapper">
           <Toolbar>
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleClick}>
+              <MenuOutlined />
+            </IconButton>
             <Avatar src={Diamond} alt="User Avater" className="Group Icon" />
 
             <Typography variant="h6" className="page-title">
@@ -37,13 +51,15 @@ function Header(props) {
               </Link>
             </Typography>
 
-            <IconButton edge="end" color="inherit" aria-label="menu" onClick={handleClick}>
+            <IconButton edge="end" color="inherit" aria-label="menu" onClick={handleClickG}>
               <MoreHorizOutlined className="more-icon" />
             </IconButton>
           </Toolbar>
         </div>
       </AppBar>
-      <GroupMenu anchorEl={anchorEl} handleClose={handleClose} />
+
+      <GroupMenu anchorEl={anchorElG} handleClose={handleCloseG} />
+      <SideMenu anchorEl={anchorEl} handleClose={handleClose} />
     </div>
   );
 }

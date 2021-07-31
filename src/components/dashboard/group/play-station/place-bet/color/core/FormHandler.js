@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import GREEN from '../../../../../../lib/assets/colors/green.png';
-import BLUE from '../../../../../../lib/assets/colors/blue.png';
-import RED from '../../../../../../lib/assets/colors/red.png';
+import GREEN from '../../../../../../../lib/assets/colors/green.png';
+import BLUE from '../../../../../../../lib/assets/colors/blue.png';
+import RED from '../../../../../../../lib/assets/colors/red.png';
 
 function FormHandler() {
   const colors = [

@@ -21,7 +21,7 @@ function Settings () {
 	const [ openPin, showPin, closePin ] = PinModalHandler();
 
 	return (
-		<Pageview title="Settings" data-aos="flip-left">
+		<Pageview title="Settings">
 			<div className="settings">
 				<Link to="/profile">
 					<div className="control" >

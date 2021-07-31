@@ -24,20 +24,12 @@ const GameHistory = lazy(() => import('../../components/dashboard/game-history/G
 const GameDetails = lazy(() => import('../../components/dashboard/game-details/GameDetails'));
 const Withdraw = lazy(() => import('../../components/dashboard/withdraw/Withdraw'));
 const Activities = lazy(() => import('../../components/dashboard/activities/Activites'));
-const InviteFriends = lazy(() => import('../../components/dashboard/invite-friends/InviteFriends'));
 const Settings = lazy(() => import('../../components/dashboard/settings/Settings'));
 const Profile = lazy(() => import('../../components/dashboard/profile/Profile'));
 const Wallet = lazy(() => import('../../components/dashboard/wallet/Wallet'));
 
 //Iclass group
-const JoinGroup = lazy(() => import('../../components/dashboard/group/join-group/JoinGroup'));
-const GroupInfo = lazy(() => import('../../components/dashboard/group/group-info/GroupInfo'));
-const GroupPlaceBetSoccer = lazy(() =>
-  import('../../components/dashboard/group/place-bet/soccer/PlaceBet')
-);
-const GroupPlaceBetColor = lazy(() =>
-  import('../../components/dashboard/group/place-bet/color/PlaceBet')
-);
+const GroupInfo = lazy(() => import('../../components/dashboard/group/play-station/group-info/GroupInfo'));
 const PlayStation = lazy(() => import('../../components/dashboard/group/play-station/PlayStation'));
 
 const PageNotFound = lazy(() => import('../../lib/control/error-page/PageNotFound'));
@@ -70,15 +62,12 @@ function Index() {
 
           <PrivateRoute path="/withdraw" component={Withdraw} />
           <PrivateRoute path="/activities" component={Activities} />
-          <PrivateRoute path="/invite-friends" component={InviteFriends} />
           <PrivateRoute path="/settings" component={Settings} />
           <PrivateRoute path="/profile" component={Profile} />
           <PrivateRoute path="/wallet" component={Wallet} />
 
-          <PrivateRoute path="/join-group" component={JoinGroup} />
+       
           <PrivateRoute path="/group-info" component={GroupInfo} />
-          <PrivateRoute path="/group/place-bet/soccer/:groupId" component={GroupPlaceBetSoccer} />
-          <PrivateRoute path="/group/place-bet/color/:groupId" component={GroupPlaceBetColor} />
           <PrivateRoute path="/group/play-station/:groupId" component={PlayStation} />
 
           <PrivateRoute path="/*" component={PageNotFound} />

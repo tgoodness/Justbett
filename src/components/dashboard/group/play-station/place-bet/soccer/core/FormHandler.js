@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import CHE from '../../../../../../lib/assets/clubes/CHE.png';
-import MAN from '../../../../../../lib/assets/clubes/MAN.png';
-import ARS from '../../../../../../lib/assets/clubes/ARS.png';
-import BAR from '../../../../../../lib/assets/clubes/BAR.png';
-import LIV from '../../../../../../lib/assets/clubes/LIV.png';
-import BAY from '../../../../../../lib/assets/clubes/BAY.png';
+import CHE from '../../../../../../../lib/assets/clubes/CHE.png';
+import MAN from '../../../../../../../lib/assets/clubes/MAN.png';
+import ARS from '../../../../../../../lib/assets/clubes/ARS.png';
+import BAR from '../../../../../../../lib/assets/clubes/BAR.png';
+import LIV from '../../../../../../../lib/assets/clubes/LIV.png';
+import BAY from '../../../../../../../lib/assets/clubes/BAY.png';
 
 function FormHandler() {
   const teams = [

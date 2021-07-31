@@ -12,7 +12,6 @@
 }
 
 .group-page-title-wrapper {
-
   .page-title {
     color: $black-color !important;
     font-weight: 700 !important;
@@ -79,6 +78,10 @@
 
   .MuiIconButton-label {
     color: $black-color !important;
+  }
+
+  .user-photo{
+    cursor: pointer;
   }
 }
 

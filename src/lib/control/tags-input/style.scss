@@ -20,7 +20,7 @@ div.ReactTags__tagInput input.ReactTags__tagInputField,
 div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
   height: 31px;
   margin: 0;
-  font-size: 15px;
+  font-size: 12px;
   width: 100%;
   border: 0;
   outline: none;
@@ -40,7 +40,7 @@ div.ReactTags__selected span.ReactTags__tag {
   border-radius: 2px;
   color: $primary-color;
   margin-bottom: 5px;
-  background-color: rgba($color: $primary-color, $alpha: 0.1) !important;
+  background-color: transparent !important;
   font-weight: 500;
   button {
     border: none !important;
@@ -51,10 +51,10 @@ div.ReactTags__selected span.ReactTags__tag {
 }
 
 .ReactTags__selected span:first-child {
-  border: 1px solid $primary-color !important;
-  color: $primary-color !important;
+  border: 1px solid $black-color !important;
+  color: $black-color !important;
   padding: 5px 8px !important;
-  background-color: rgba($color: $primary-color, $alpha: 0.1) !important;
+  background-color: transparent;
   font-weight: 500;
 
   button {

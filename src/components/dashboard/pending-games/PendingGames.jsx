@@ -7,7 +7,6 @@ import Pageview from '../../../lib/layout/dashboard/Pageview';
 
 import util from '../../../lib/service/utils';
 import misc from '../../../lib/service/misc';
-import '../../../lib/style/dashboard/game-history.scss';
 
 import pearl from '../../../lib/assets/stones/pearl.png';
 import silver from '../../../lib/assets/stones/silver.png';
@@ -18,6 +17,8 @@ import MAN from '../../../lib/assets/clubes/MAN.png';
 import BAR from '../../../lib/assets/clubes/BAR.png';
 import ARS from '../../../lib/assets/clubes/ARS.png';
 import BLUE from '../../../lib/assets/colors/blue.png';
+import '../../../lib/style/dashboard/pending-games.scss';
+
 function GameHistory () {
 	const gameHistory = [
 		{
@@ -96,8 +97,8 @@ function GameHistory () {
 	];
 
 	return (
-		<Pageview title="Pending Games" data-aos="flip-left">
-			<div className="pending-games-page">
+		<Pageview title="Pending Games">
+			<div className="pending-games">
 
 				<div className="page-background">
 					<h3><FilterListOutlined /></h3>
