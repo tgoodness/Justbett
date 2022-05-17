@@ -1,0 +1,103 @@
+@import '../../../constant/index.scss';
+
+.page-container {
+  margin: 0 200px;
+
+  @media screen and (max-width: 900px) {
+    margin: 10px 0px;
+  }
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid $border-color;
+  background-color: $white-color;
+  @media screen and (max-width: 768px) {
+    border: none;
+  }
+
+  .view {
+    display: flex;
+    max-height: 600px;
+    .side-bar {
+      flex: 5;
+    }
+    .main {
+      flex: 6;
+      border-left: 1px solid $border-color;
+    }
+  }
+}
+
+.group-page-heading {
+  text-decoration: none;
+  color: $black-color;
+
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row !important;
+  align-items: center;
+
+  .group-info {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
+
+    h5 {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: $black-color;
+      font-weight: 700;
+    }
+
+    h6 {
+      margin-bottom: 0;
+      color: $grey-color;
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.side-bar {
+  border-right: 1px solid $faint-color;
+  margin-top: -10px;
+  padding-top: 15px;
+}
+
+#scrollbar {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  overflow-y: scroll !important;
+}
+
+#scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+}
+
+@media screen and (max-width: 767px) {
+  .main-page-wrapper {
+    padding: 0;
+  }
+}

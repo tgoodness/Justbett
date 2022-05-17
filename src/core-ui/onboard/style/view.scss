@@ -1,0 +1,32 @@
+@import '../../../constant/index.scss';
+
+.onbaord-form {
+  border: 2px solid $faint-color;
+  padding: 30px 40px;
+  @media screen and(max-width: 768px) {
+    border: none;
+    padding: 0 10px;
+  }
+}
+
+.onboard-logo-wrapper {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  h6 {
+    margin-top: 15px;
+    color: $grey-color !important;
+  }
+}
+
+.bottom-link-wrapper {
+  border: 2px solid $faint-color;
+  padding: 15px 10px;
+  margin-top: 6px;
+
+  @media screen and(max-width: 768px) {
+    border: none;
+    padding: 0 10px;
+    margin-top: 15px;
+  }
+}

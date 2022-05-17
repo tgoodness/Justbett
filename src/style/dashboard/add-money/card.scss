@@ -1,0 +1,83 @@
+@import '../../../constant/index.scss';
+
+.bank-transfer {
+  @extend %page-padding;
+
+  .existing-details {
+    background: linear-gradient(260.42deg, #e18c3d 20.07%, #494a5c 132.43%);
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: bottom;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h6 {
+      color: $white-color;
+
+      svg {
+        cursor: pointer;
+
+        &:hover {
+          transition: all 0.5s linear;
+          color: $blue-color;
+        }
+      }
+    }
+
+    h5 {
+      font-weight: 600;
+      color: $white-color;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .bank-details {
+      margin-bottom: 10px;
+    }
+
+    .account-balance {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      img {
+        width: 25px;
+        height: 20px;
+        border-radius: 5px;
+        margin-right: 8px;
+        margin-top: 5px;
+      }
+
+      h5 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .intruction {
+    color: $grey-color;
+    margin-bottom: 50px;
+
+    span {
+      font-weight: 600;
+      color: $black-color;
+    }
+  }
+
+  @media screen and(max-width: 767px) {
+    padding: 0 20px;
+    h5 {
+      font-size: 15px !important;
+    }
+
+    h6 {
+      font-size: 13px;
+    }
+  }
+}

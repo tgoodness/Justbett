@@ -1,0 +1,12 @@
+@import './colors.scss';
+%border-box {
+  border: 1px solid $border-color;
+  box-shadow: inset 0px 0px 2.8943px rgba(82, 80, 80, 0.25);
+  padding: 0 15px;
+  border-radius: 9.64768px;
+  margin-bottom: 10px;
+}
+
+%page-padding {
+  padding: 15px 10px 15px 20px;
+}

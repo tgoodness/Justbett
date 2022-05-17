@@ -1,0 +1,27 @@
+@import '../../../constant/index.scss';
+.title-container {
+  margin: 0 200px;
+  @media screen and (max-width: 900px) {
+    margin: 10px 0px;
+  }
+
+  border-radius: 5px 5px 0 0;
+  border: 1px solid $border-color;
+  border-bottom: none;
+  background-color: $white-color;
+  @media screen and (max-width: 768px) {
+    border: none;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .sidebar {
+    flex: 5;
+    border-right: 1px solid $border-color;
+  }
+  .title {
+    flex: 6;
+  }
+}

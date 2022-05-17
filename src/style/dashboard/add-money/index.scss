@@ -1,0 +1,31 @@
+@import '../../../constant/index.scss';
+
+.add-money {
+  @extend %page-padding;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @extend %border-box;
+
+    h5 {
+      @extend %h5;
+      margin-bottom: 0;
+    }
+    span {
+      border: 3px solid $border-color;
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      span {
+        border: 3px solid $primary-color;
+      }
+    }
+  }
+}

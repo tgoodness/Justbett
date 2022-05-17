@@ -1,0 +1,39 @@
+@import '../../../constant/index.scss';
+
+.exit-group {
+  h5 {
+    span {
+      font-size: 18px;
+      color: $black-color;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+
+  h6 {
+    font-size: 15px;
+    color: $grey-color;
+  }
+
+  .btn-wrapper {
+    text-align: right;
+
+    span:first-child {
+      font-weight: 600;
+      margin-right: 30px;
+      color: $black-color;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    span:last-child {
+      font-weight: 600;
+      color: $red-color;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

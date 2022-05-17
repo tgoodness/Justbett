@@ -1,0 +1,44 @@
+@import '../../../constant/index.scss';
+
+.groups {
+  .group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+
+    .group-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      h5 {
+        font-size: 18px;
+        color: $black-color;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      h6 {
+        font-size: 15px;
+        color: $grey-color;
+      }
+    }
+
+    svg {
+      color: #95969b;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

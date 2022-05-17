@@ -1,0 +1,16 @@
+@import '../../../constant/index.scss';
+
+.main-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+
+  h5 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+}

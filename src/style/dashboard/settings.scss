@@ -1,0 +1,73 @@
+@import '../../constant/index.scss';
+
+.settings {
+  padding-left: 5px;
+  padding-top: 5px;
+
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $faint-color;
+    padding: 10px 5px 5px 15px;
+
+    &:hover {
+      background-color: $faint-color;
+    }
+
+    h6 {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: $grey-color;
+
+      svg:first-child {
+        font-size: 35px;
+        color: $white-color;
+        padding: 4px 8px;
+      }
+    }
+
+    svg {
+      font-size: 20px;
+      color: $grey-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .profile-icon {
+      background-color: $primary-color;
+      border-radius: 5px !important;
+      margin-right: 10px;
+    }
+
+    .bank-icon {
+      background-color: $red-color;
+      border-radius: 5px !important;
+      margin-right: 10px;
+    }
+
+    .lock-icon {
+      background-color: #449ed0;
+      border-radius: 5px !important;
+      margin-right: 10px;
+    }
+
+    .pin-icon {
+      background-color: #3f50b9;
+      border-radius: 5px !important;
+      margin-right: 10px;
+    }
+  }
+
+  .control:last-child {
+    border-bottom: none !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
