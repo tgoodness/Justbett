@@ -23,12 +23,12 @@ function Index(props: Props) {
     >
       <div className="confirm-place-bet">
         <InputImage
+          id="amount"
           name="amount"
           label="Amount"
           icon={IMAGES.ngn}
           value={amount}
           onChange={handleAmount}
-          className="mt-4"
         />
         <TagsInput
           tags={tags}

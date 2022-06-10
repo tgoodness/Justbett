@@ -14,7 +14,7 @@ import formHandler from './core/FormHandler';
 import ConfirmBet from './confirm';
 import AddFriends from './add-friends';
 import { IMAGES } from '../../../../constant';
-import '../../../../style/dashboard/place-bet-soccer.scss';
+import './style.scss';
 
 function PlaceBet() {
   const { teamA, handleTeamA, teamB, handleTeamB } = logicHandler();

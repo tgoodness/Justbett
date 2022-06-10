@@ -3,7 +3,7 @@ import editOutline from '@iconify/icons-eva/edit-outline';
 
 import editFriendModalHandler from '../../../../../hooks/useModalHandler';
 import EditTeam from '../../settings/edit-team';
-import Button from '../../../../../components/Button';
+import Button from '../../../../../components/buttons/Button';
 import { IMAGES } from '../../../../../constant';
 
 const Ready = () => {

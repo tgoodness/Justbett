@@ -35,6 +35,8 @@
       width: 40px;
       height: 40px;
       border-radius: 100px;
+      border: 2px solid $primary-color;
+      padding: 2px;
       &:hover {
         cursor: pointer;
       }

@@ -9,7 +9,7 @@
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
-    @extend %border-box;
+    @extend %item-border-box;
 
     h5 {
       @extend %h5;

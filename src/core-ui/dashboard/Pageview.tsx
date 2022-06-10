@@ -17,7 +17,7 @@ const Pageview = (props: Props) => {
             <SideBar />
           </div>
           <div className="main animate__animated animate__fadeIn animate__slow">
-            <div id="scrollbar" style={{ maxHeight: misc.mainContent() - 60 }}>
+            <div id="scrollbar" style={{ maxHeight: misc.mainContent() - 115 }}>
               {children}
             </div>
           </div>

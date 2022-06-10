@@ -50,10 +50,10 @@ const MenuItems = (props: Props): JSX.Element => {
             <PeopleAltOutlined /> Groups
           </MenuItem>
         </Link>
-        <Link to="/wallet">
+        <Link to="/add-money">
           <MenuItem>
             <AccountBalanceWalletOutlined />
-            My Wallet
+            Add Money
           </MenuItem>
         </Link>
 

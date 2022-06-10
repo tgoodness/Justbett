@@ -1,0 +1,30 @@
+@import '../../../../constant/index.scss';
+
+.update-bank {
+  .existing-details {
+    background-image: url('../../../../assets/background/dashboard.png');
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: bottom;
+    padding: 20px;
+
+    h5 {
+      font-weight: 600;
+      color: $white-color;
+      margin-bottom: 5px;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      h6 {
+        color: $white-color;
+      }
+    }
+  }
+}

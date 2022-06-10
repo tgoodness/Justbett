@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { PlusSquareOutlined, BankOutlined, ShoppingOutlined } from '@ant-design/icons';
 import Pageview from '../../../core-ui/dashboard/Pageview';
 import Header from '../../../core-ui/dashboard/Header';
-import GameItemTemplate from './GameItemTemplate';
-import FiatItemTemplate from './FiatItemTemplate';
+import GameItem from '../game-history/GameItem';
+import FiatItem from '../game-history/FiatItem';
 import { IMAGES } from '../../../constant';
-import '../../../style/dashboard/dashboard.scss';
+import './style.scss';
 
 const Dashboard = () => {
   const activities = [
@@ -72,8 +72,8 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="activities">
-            <div className="activities-header">
+          <div className="history">
+            <div className="heading">
               <h5>Recent History</h5>
               <h6>
                 <Link to="/activity">More</Link>
@@ -85,9 +85,9 @@ const Dashboard = () => {
             ) : (
               activities.map((item: any, index) => {
                 return item.type === 'fiat' ? (
-                  <FiatItemTemplate item={item} key={index} />
+                  <FiatItem item={item} key={index} />
                 ) : (
-                  <GameItemTemplate item={item} key={index} />
+                  <GameItem item={item} key={index} />
                 );
               })
             )}

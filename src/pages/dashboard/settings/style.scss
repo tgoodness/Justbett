@@ -1,0 +1,73 @@
+@import '../../../constant/index.scss';
+
+.settings {
+  padding-top: 20px;
+  .item {
+    @extend %page-padding;
+    padding-top: 10px;
+    display: flex;
+    align-items: flex-start;
+
+    &:hover {
+      background-color: $faint-color;
+      cursor: pointer;
+    }
+
+    span {
+      svg {
+        font-size: 35px;
+        color: $white-color;
+        padding: 4px 8px;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      border-bottom: 1px solid $border-color;
+      margin-left: 10px;
+      padding-bottom: 10px;
+
+      h6 {
+        font-size: 15px;
+        font-weight: 500;
+         margin-top: 7px;
+        color: $black-color;
+      }
+
+      svg {
+        font-size: 20px;
+        color: $grey-color !important;
+      }
+    }
+
+    .referrals-icon {
+      @include icon-bg($green-color);
+    }
+
+    .profile-icon {
+      @include icon-bg($yellow-color);
+    }
+
+    .edit-bank-icon {
+      @include icon-bg($red-color);
+    }
+
+    .change-pin-icon {
+      @include icon-bg($palatinate-blue-color);
+    }
+
+    .change-password-icon {
+      @include icon-bg($blue-color);
+    }
+    .support-icon {
+      @include icon-bg($peaceful-river-color);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

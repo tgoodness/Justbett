@@ -38,14 +38,4 @@
       margin-right: 15px;
     }
   }
-
-  .pending-game-badge {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-
-    .MuiBadge-colorSecondary {
-      background-color: $blue-color !important;
-    }
-  }
 }

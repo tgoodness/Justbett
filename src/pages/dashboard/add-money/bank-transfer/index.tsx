@@ -1,7 +1,8 @@
 import { IMAGES } from '../../../../constant';
 import Pageview from '../../../../core-ui/dashboard/Pageview';
 import Header from '../../../../core-ui/dashboard/Header';
-import '../../../../style/dashboard/add-money/bank-transfer.scss';
+import Button from '../../../../components/buttons/Button';
+import './style.scss';
 
 function BankTransfer() {
   return (
@@ -18,7 +19,7 @@ function BankTransfer() {
             </div>
 
             <div>
-              <img src={IMAGES.ripple} alt="Ripple" width="60" />
+              <img src={IMAGES.ripple} alt="Ripple" width="50" />
               <h6>KUDA BANK</h6>
             </div>
           </div>
@@ -27,7 +28,7 @@ function BankTransfer() {
           </h6>
 
           <div className="mt-4">
-            <button className="btn btn-block btn-black">Copy Account Details</button>
+            <Button className="btn btn-black  btn-block" label="Copy It" />
           </div>
         </div>
       </Pageview>

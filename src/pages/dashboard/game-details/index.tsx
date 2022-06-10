@@ -2,7 +2,7 @@ import { Badge } from '@material-ui/core';
 import { IMAGES } from '../../../constant';
 import Pageview from '../../../core-ui/dashboard/Pageview';
 import Header from '../../../core-ui/dashboard/Header';
-import '../../../style/dashboard/game-details.scss';
+import './style.scss';
 
 const GameDetails = () => {
   return (

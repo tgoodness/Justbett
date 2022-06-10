@@ -1,0 +1,87 @@
+@import '../../../constant/index.scss';
+.history {
+  @extend %page-padding;
+
+  .filter-icon {
+    font-size: 35px !important;
+    color: $black-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .item {
+    @extend %item-border-box;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: $faint-color;
+    }
+
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+
+      svg {
+        background-color: $black-color;
+        padding: 10px;
+        font-size: 40px;
+        color: $faint-color;
+        border-radius: 50px;
+        margin-right: 15px;
+      }
+
+      img {
+        width: 38px;
+        height: 38px;
+        margin-right: 15px;
+      }
+
+      div {
+        margin-top: 10px;
+        h5 {
+          margin-bottom: 5px;
+          font-size: 14px;
+          color: $black-color;
+          font-weight: 600;
+          margin-bottom: 2px;
+          span {
+            background-color: $black-color;
+            color: $white-color;
+            padding: 4px 6.3px;
+            font-size: 10px;
+            border-radius: 20px;
+          }
+        }
+
+        h6 {
+          font-size: 13px;
+          color: gray;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .amount {
+      text-align: right;
+      h5 {
+        margin-top: 0;
+        margin-bottom: 0px;
+        font-size: 14px;
+        color: $black-color;
+        font-weight: 600;
+      }
+
+      h6 {
+        margin-top: 0;
+        margin-bottom: 0px;
+        font-size: 13px;
+        color: $grey-color;
+        font-weight: normal;
+      }
+    }
+  }
+}

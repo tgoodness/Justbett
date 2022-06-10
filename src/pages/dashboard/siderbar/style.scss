@@ -1,0 +1,119 @@
+@import '../../../constant/index.scss';
+
+.active-games {
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .search-input {
+   
+    border: 1px solid $border-color;
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: text;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      align-items: center;
+      flex: 1;
+
+      input {
+        background-color: transparent;
+        border: none !important;
+        color: $black-color;
+        font-weight: 500;
+        font-size: 15px;
+        width: 100%;
+        margin-left: 20px;
+
+        &:focus {
+          outline: none !important;
+        }
+      }
+
+      .arrow-back-icon {
+        cursor: pointer;
+        color: $black-color;
+        font-size: 20px;
+      }
+    }
+
+    .close-icon {
+      cursor: pointer;
+      color: $black-color;
+      font-size: 20px;
+    }
+  }
+
+  .game-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 5px 20px;
+
+    &:hover {
+      background-color: $faint-color;
+    }
+  }
+
+  .game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+
+    img {
+      border-radius: 100px;
+      margin-right: 10px;
+    }
+    div {
+      h5 {
+        color: $black-color !important;
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        margin-top: 3px;
+      }
+
+      h6 {
+        color: $grey-color !important;
+        font-size: 14px;
+        font-weight: normal !important;
+      }
+    }
+  }
+
+  .game-counter {
+    text-align: right;
+
+    h5 {
+      color: $grey-color !important;
+      font-size: 15px;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    h6 {
+      color: $grey-color !important;
+      font-size: 14px;
+      font-weight: normal !important;
+      margin-right: 10px;
+
+      span {
+        background-color: $black-color;
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
-import React from 'react';
 import { Modal } from 'antd';
 import Avatar from 'antd/lib/avatar/avatar';
-import FormControl from '../../../../components/FormControlFilled';
-import Input from '../../../../components/InputFilled';
+import FormControl from '../../../../components/FormControl';
+import Input from '../../../../components/Input';
+import Button from '../../../../components/buttons/Button';
 import FormHandler from './core/FormHandler';
-import '../../../../style/dashboard/update-profile.scss';
 import { IMAGES } from '../../../../constant';
+import '../../../../style/dashboard/update-profile.scss';
 
 type Props = { visible: boolean; handleCancel: () => void };
 const ChangePassword = (props: Props) => {
@@ -60,9 +60,7 @@ const ChangePassword = (props: Props) => {
           error={confirm.error}
           helperText={confirm.helperText}
         />
-        <div className="pl-md-4 pr-md-4 mt-4">
-          <button className="btn btn-block btn-black">Save Changes</button>
-        </div>
+        <Button label="Change" className="btn btn-block btn-black mt-3" />
       </Modal>
     </>
   );

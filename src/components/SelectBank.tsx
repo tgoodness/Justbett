@@ -1,9 +1,8 @@
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import util from '../helpers/utils';
+import Select from '@mui/material/Select';
 
 type Bank = {
   bankCode: number;
@@ -21,33 +20,31 @@ type Props = {
   items: Bank[] | [];
 };
 
-const SelectComponent = (prob: Props): JSX.Element => {
-  const { name, id, label, value, error = false, onChange, helperText, items, ...rest } = prob;
+export default function BasicSelect(props: Props) {
+  const { name, id, label, value, error = false, onChange, helperText, items, ...rest } = props;
 
   return (
     <FormControl className="text-field">
-      <InputLabel id="demo-simple-select-helper-label">{label}</InputLabel>
+      <InputLabel id="demo-simple-select-label">{label}</InputLabel>
       <Select
-        labelId="demo-simple-select-helper-label"
+        labelId="demo-simple-select-label"
         id={id}
         value={value}
-        onChange={onChange}
+        label={label}
         name={name}
+        onChange={onChange}
         {...(error && { error: true })}
         {...rest}
       >
-        {items.map((item) => {
+        {items.map((item, i) => {
           return (
-            <MenuItem key={util.randomNumber() + item.bankCode} value={item.bankName}>
+            <MenuItem key={i} value={item.bankName}>
               {item.bankName}
             </MenuItem>
           );
         })}
       </Select>
-
       <FormHelperText>{helperText}</FormHelperText>
     </FormControl>
   );
-};
-
-export default SelectComponent;
+}

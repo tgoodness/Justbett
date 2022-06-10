@@ -4,7 +4,7 @@ import GameDetails from '../game-details';
 
 import editFriendModalHandler from '../../../../../hooks/useModalHandler';
 import EditTeam from '../../settings/edit-team';
-import Button from '../../../../../components/Button';
+import Button from '../../../../../components/buttons/Button';
 import { IMAGES } from '../../../../../constant';
 
 const PlayAgain = (): JSX.Element => {

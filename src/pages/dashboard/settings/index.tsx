@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
 
-import { ChevronRight, LockOutlined } from '@material-ui/icons';
-import { ProfileOutlined, UserOutlined, BankOutlined } from '@ant-design/icons';
 import Pageview from '../../../core-ui/dashboard/Pageview';
 import Header from '../../../core-ui/dashboard/Header';
 import bankModalHandler from '../../../hooks/useModalHandler';
 import passwordModalHandler from '../../../hooks/useModalHandler';
 import pinModalHandler from '../../../hooks/useModalHandler';
 
-import UpdateBank from './update-bank';
+import UpdateBank from './edit-bank';
 import ChangePassword from './change-password';
 import ChangePin from './change-pin';
-import '../../../style/dashboard/settings.scss';
+import './style.scss';
+import Item from './Item';
 
 function Settings() {
   const {
@@ -35,50 +34,23 @@ function Settings() {
   return (
     <>
       <Header title="Settings">
-        <h6>Settings</h6>
+        <h5>Settings</h5>
       </Header>
+
       <Pageview>
         <div className="settings">
+          <Item label="Referrals" type="referrals" showModal={showModalB} />
           <Link to="/profile">
-            <div className="control">
-              <h6>
-                <span className="profile-icon">
-                  <UserOutlined />
-                </span>
-                <span>Update Profile</span>
-              </h6>
-              <ChevronRight />
-            </div>
+            <Item label="Profile" type="profile" />
           </Link>
-          <div className="control" onClick={showModalB}>
-            <h6>
-              <span className="bank-icon">
-                <BankOutlined />
-              </span>
-              <span>Update Bank</span>
-            </h6>
-            <ChevronRight />
-          </div>
 
-          <div className="control" onClick={showModalPass}>
-            <h6>
-              <span className="lock-icon">
-                <LockOutlined />
-              </span>
-              <span>Change Password</span>
-            </h6>
-            <ChevronRight />
-          </div>
+          <Item label="Edit Bank" type="edit-bank" showModal={showModalB} />
+          <Item label="Change PIN" type="change-pin" showModal={showModalPin} />
+          <Item label="Change Password" type="change-password" showModal={showModalPass} />
 
-          <div className="control" onClick={showModalPin}>
-            <h6>
-              <span className="pin-icon">
-                <ProfileOutlined />
-              </span>
-              <span>Change Pin</span>
-            </h6>
-            <ChevronRight />
-          </div>
+          <Link to="/support">
+            <Item label="Support" type="support" />
+          </Link>
         </div>
       </Pageview>
       <UpdateBank visible={visibleB} handleCancel={handleCancelB} />

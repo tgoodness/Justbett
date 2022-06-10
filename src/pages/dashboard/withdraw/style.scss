@@ -1,0 +1,55 @@
+@import '../../../constant/index.scss';
+
+.withdraw {
+  @extend %page-padding;
+  .account-balance {
+    background-image: url('../../../assets/background/dashboard.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: bottom;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div:nth-child(1) {
+      h5 {
+        font-weight: 600;
+        color: $white-color;
+        margin-bottom: 3px;
+        font-size: 18px;
+      }
+
+      h6 {
+        color: $white-color;
+        margin-bottom: 0;
+        svg {
+          cursor: pointer;
+
+          &:hover {
+            transition: all 0.5s linear;
+            color: $blue-color;
+          }
+        }
+      }
+    }
+
+    div:nth-child(2) {
+      h5 {
+        font-weight: 600;
+        color: $white-color;
+        margin-bottom: 3px;
+        font-size: 18px;
+
+        @media screen and(max-width: 767px) {
+          font-size: 15px !important;
+        }
+      }
+    }
+  }
+}

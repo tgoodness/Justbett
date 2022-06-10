@@ -11,7 +11,6 @@ function AccountBalance() {
       .accountBalance()
       .then(
         (response) => {
-         
           if (mounted.current) {
             if (response.balance.data.status === 'success') {
               dispatch({
@@ -29,7 +28,7 @@ function AccountBalance() {
           }
         }
       )
-      .catch(e => {
+      .catch((e) => {
         console.log('Error at ' + e);
       });
 

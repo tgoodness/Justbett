@@ -2,12 +2,10 @@ import React from 'react';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
-import { Badge } from '@material-ui/core';
+
 import {
   DashboardOutlined,
   PlayArrowOutlined,
-  MoreHorizOutlined,
-  ListAltOutlined,
   ScheduleOutlined,
   LocalMallOutlined,
   HelpOutline,
@@ -53,28 +51,11 @@ const MenuItems = (props: Props): JSX.Element => {
             </MenuItem>
           </Link>
         )}
-        <Link to="/pending-games">
-          <MenuItem className="pending-game-badge">
-            <span>
-              {' '}
-              <MoreHorizOutlined />
-              Pending
-            </span>
-            <Badge badgeContent={5} color="secondary" />
-            <span></span>
-          </MenuItem>
-        </Link>
+       
         <Link to="/game-history">
           <MenuItem>
             <ScheduleOutlined />
             Game History
-          </MenuItem>
-        </Link>
-
-        <Link to="/activities">
-          <MenuItem>
-            <ListAltOutlined />
-            Activities
           </MenuItem>
         </Link>
 
@@ -84,7 +65,7 @@ const MenuItems = (props: Props): JSX.Element => {
           </MenuItem>
         </Link>
 
-        <Link to="/">
+        <Link to="/support">
           <MenuItem>
             <HelpOutline /> Support
           </MenuItem>

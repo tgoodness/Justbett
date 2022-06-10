@@ -1,0 +1,51 @@
+@import '../../../../constant/index.scss';
+
+.fund-with-card {
+  @extend %page-padding;
+  .wallet-details {
+    background-image: url('../../../../assets/background/dashboard.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: bottom;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h6 {
+      @extend %h6;
+      color: $white-color !important;
+    }
+
+    h5 {
+      @extend %h5;
+      color: $white-color !important;
+      margin-bottom: 5px;
+    }
+
+    div:last-child {
+      text-align: right;
+    }
+  }
+
+  .intruction {
+    color: $black-color;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 0 70px;
+    margin-top: 40px;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .btn-black {
+    width: 100%;
+    border-radius: 7px;
+  }
+}

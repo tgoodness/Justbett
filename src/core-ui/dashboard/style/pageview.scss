@@ -16,7 +16,7 @@
 
   .view {
     display: flex;
-    max-height: 600px;
+    max-height: 550px;
     .side-bar {
       flex: 5;
     }
@@ -82,6 +82,7 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   overflow-y: scroll !important;
+  scroll-behavior: smooth;
 }
 
 #scrollbar::-webkit-scrollbar {

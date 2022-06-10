@@ -20,7 +20,7 @@ const SelectComponent = (prob: Props): JSX.Element => {
   const { name, id, label, value, error = false, onChange, helperText, items, ...rest } = prob;
 
   return (
-    <FormControl className="text-field">
+    <FormControl className="text-field" variant="outlined">
       <InputLabel id="demo-simple-select-helper-label">{label}</InputLabel>
       <Select
         labelId="demo-simple-select-helper-label"

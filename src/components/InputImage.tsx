@@ -1,51 +1,58 @@
-import { Input, TextFieldProps } from '@material-ui/core';
+import { TextFieldProps } from '@material-ui/core';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import Info from '@material-ui/icons/Info';
+import Info from '@mui/icons-material/Info';
 
-type Props = {
+export type Props = {
   name: string;
-  id?: string;
-  label?: string;
-  value: string | number;
-  error?: boolean | undefined;
+  value?: string | number;
   type?: string;
+  id: string;
   onChange?: TextFieldProps['onChange'];
+  label: string;
+  error?: boolean | undefined;
   helperText?: string | boolean | undefined;
-  disabled?: boolean;
   icon: string;
+  disabled?: boolean;
   className?: string;
 };
 
-const InputImage = (props: Props): JSX.Element => {
+const Input = (props: Props) => {
   const {
-    id,
     name,
-    label,
     value,
-    error = false,
-    type,
+    type='text',
+    id,
     onChange,
+    label,
+    error = null,
     helperText,
-    disabled = false,
     icon,
-    className,
+    disabled = false,
   } = props;
 
   return (
-    <FormControl className={`text-field ${className}`}>
-      <InputLabel htmlFor="demo-simple-select-helper-label">{label}</InputLabel>
-      <Input
+    <FormControl variant="outlined" className="text-field">
+      <InputLabel htmlFor="outlined-adornment-password ">{label}</InputLabel>
+      <OutlinedInput
+        name={name}
         type={type}
         value={value}
+        label={label}
         id={id}
-        name={name}
         disabled={disabled}
         {...(error && { error: true })}
         onChange={onChange}
-        endAdornment={<img src={icon} alt="Image Addon" width="25" />}
         autoComplete="off"
+        labelWidth={70}
+        endAdornment={
+          <InputAdornment position="end">
+            <img src={icon} alt="Image Addon" width="25" />
+          </InputAdornment>
+        }
       />
       <FormHelperText className="text-danger">
         {error && <Info style={{ fontSize: '15px' }} />} {helperText}
@@ -54,4 +61,4 @@ const InputImage = (props: Props): JSX.Element => {
   );
 };
 
-export default InputImage;
+export default Input;

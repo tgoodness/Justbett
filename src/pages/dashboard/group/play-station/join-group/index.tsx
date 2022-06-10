@@ -1,4 +1,4 @@
-import Button from '../../../../../components/Button';
+import Button from '../../../../../components/buttons/Button';
 import '../../../../../style/dashboard/group/join-group.scss';
 
 function JoinGroup() {

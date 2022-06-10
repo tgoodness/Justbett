@@ -4,7 +4,7 @@ import { IGroup } from '../../../interfaces/game';
 import Group from './Group';
 import SearchBar from './SearchBar';
 import searchLogic from './core/SearchLogic';
-import '../../../style/dashboard/active-games.scss';
+import './style.scss';
 
 function Sidebar() {
   const groups = [

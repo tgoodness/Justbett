@@ -53,6 +53,49 @@ body {
   color: #3a3a3a;
 }
 
+.text-field legend {
+  float: none !important;
+  margin-right: 0 !important;
+}
+
+.text-field {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+
+  input {
+    font-weight: bold !important;
+    color: $black-color !important;
+  }
+
+  .MuiInputBase-formControl {
+    font-weight: bold !important;
+    color: $black-color !important;
+    border-radius: 10px !important;
+  }
+}
+
+// .MuiOutlinedInput-input{
+//   padding-top: 15.5px !important;
+//   padding-bottom: 15.5px !important;
+// }
+
+// .text-field label {
+//   top: -4px !important;
+//   background-color: $white-color !important;
+// }
+
+// .text-field label[data-shrink='true'] {
+//   top: 0;
+// }
+
+// .Mui-disabled input {
+//   color: #3a3a3a;
+// }
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(14px, -6px) scale(0.83) !important;
+}
+
 .MuiButton-textSecondary {
   color: $primary-color !important;
 }
@@ -68,6 +111,11 @@ body {
     border-bottom: 2px solid $blue-color !important;
     outline: none !important;
   }
+}
+
+body.ant-scrolling-effect {
+  overflow: hidden;
+  width: auto !important;
 }
 
 .ant-modal-header {
@@ -98,32 +146,6 @@ body {
 .text-right {
   text-align: right !important;
 }
-
-.btn-black {
-  background-color: $black-color;
-  color: $white-color;
-  text-transform: capitalize !important;
-  font-size: 14px;
-  box-shadow: none !important;
-  margin-bottom: 10px;
-  padding: 12px;
-  border: 2px solid $black-color;
-
-  &:hover {
-    color: $white-color;
-  }
-}
-
-.btn-outlined-black {
-  color: $black-color;
-  text-transform: capitalize !important;
-  font-size: 14px;
-  background: transparent !important;
-  border: 2px solid $black-color;
-  box-shadow: none !important;
-  padding: 12px;
-
-  &:hover {
-    color: $black-color;
-  }
+.btn-block {
+  width: 100% !important;
 }

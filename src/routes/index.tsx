@@ -16,12 +16,12 @@ const Games = lazy(() => import('../pages/dashboard/games'));
 const ActiveGames = lazy(() => import('../pages/dashboard/ongoing-games'));
 const PlaceBetSoccer = lazy(() => import('../pages/dashboard/place-bet/soccer'));
 const PlaceBetColor = lazy(() => import('../pages/dashboard/place-bet/color'));
-const PendingGames = lazy(() => import('../pages/dashboard/pending-games'));
 const GameHistory = lazy(() => import('../pages/dashboard/game-history'));
 const GameDetails = lazy(() => import('../pages/dashboard/game-details'));
 const Withdraw = lazy(() => import('../pages/dashboard/withdraw'));
-const Activities = lazy(() => import('../pages/dashboard/activities'));
+
 const Settings = lazy(() => import('../pages/dashboard/settings'));
+const Support = lazy(() => import('../pages/dashboard/support'));
 const Profile = lazy(() => import('../pages/dashboard/profile/Profile'));
 const AddMoney = lazy(() => import('../pages/dashboard/add-money'));
 const BankTransfer = lazy(() => import('../pages/dashboard/add-money/bank-transfer'));
@@ -110,15 +110,6 @@ const Index = (): JSX.Element => {
           />
 
           <Route
-            path="/pending-games"
-            element={
-              <Private>
-                <PendingGames />
-              </Private>
-            }
-          />
-
-          <Route
             path="/game-history"
             element={
               <Private>
@@ -141,15 +132,6 @@ const Index = (): JSX.Element => {
             element={
               <Private>
                 <Withdraw />
-              </Private>
-            }
-          />
-
-          <Route
-            path="/activities"
-            element={
-              <Private>
-                <Activities />
               </Private>
             }
           />
@@ -221,6 +203,15 @@ const Index = (): JSX.Element => {
             element={
               <Private>
                 <PageNotFound />
+              </Private>
+            }
+          />
+
+          <Route
+            path="/support"
+            element={
+              <Private>
+                <Support />
               </Private>
             }
           />
