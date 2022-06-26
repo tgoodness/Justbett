@@ -1,0 +1,24 @@
+@import '../../../../../constant/index.scss';
+
+.pool-play-station-item {
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    filter: blur(12px);
+  }
+  label {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    border: 1.5px solid $black-color;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  .selected {
+    border: 3px solid $primary-color;
+  }
+}

@@ -1,0 +1,110 @@
+@import '../../../constant/index.scss';
+
+.profile {
+  @extend %page-padding;
+  .content-header {
+    background-image: url('../../../assets//background/dashboard.png');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    border-radius: 10px;
+
+    .upload {
+      display: flex;
+      justify-content: center;
+
+      label {
+        position: relative;
+        &:hover {
+          cursor: pointer;
+        }
+        .mask-icon {
+          background-color: rgba($color: #000000, $alpha: 0.1);
+          text-align: center;
+          width: 90px;
+          height: 90px;
+          border-radius: 100px;
+          position: absolute;
+          .upload-icon {
+            margin-top: 22px;
+            font-size: 40px;
+            color: $white-color;
+          }
+          .upload-spinner {
+            margin-top: 45px;
+            font-size: 23px;
+            color: $white-color;
+          }
+        }
+        img {
+          border-radius: 100px;
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 20px;
+      flex: 1;
+      div {
+        flex: 1;
+
+        h5 {
+          margin-bottom: 5px;
+          font-weight: 600;
+          color: $white-color;
+        }
+
+        h6 {
+          font-weight: normal;
+          color: $white-color;
+          margin-bottom: 0;
+        }
+      }
+
+      a{
+        color: $black-color;
+      }
+    }
+  }
+
+  .content-body {
+    margin-top: 30px;
+
+    .item {
+      display: flex;
+      margin-top: 15px;
+
+      svg {
+        font-size: 30px;
+        color: $primary-color;
+        margin-right: 15px;
+      }
+
+      div {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $grey-color;
+        flex: 1;
+
+        h5 {
+          font-size: 18px;
+          font-weight: 600;
+          color: $black-color;
+          margin-bottom: 5px;
+        }
+
+        h6 {
+          font-size: 15px;
+          font-weight: normal;
+          color: $grey-color;
+        }
+      }
+    }
+  }
+}

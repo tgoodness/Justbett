@@ -1,3 +1,4 @@
+import { makeStyles } from '@material-ui/core/styles';
 import { Input } from '@material-ui/core';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -11,7 +12,14 @@ type Props = {
   categoryId: string | undefined;
 };
 
+const useStyles = makeStyles(() => ({
+  icon: {
+    marginRight: '10px',
+  },
+}));
+
 const Category = (props: Props) => {
+  const classes = useStyles();
   const { name, id, label, items, categoryId } = props;
   const data = items.find((c) => c.id === categoryId);
 
@@ -23,7 +31,9 @@ const Category = (props: Props) => {
         id={id}
         name={name}
         value={data?.name}
-        startAdornment={<img src={data?.icon} alt="Category Icon" width="15" className="mr-1" />}
+        startAdornment={
+          <img src={data?.icon} alt="Category Icon" width="20" className={classes.icon} />
+        }
         autoComplete="off"
       />
     </FormControl>

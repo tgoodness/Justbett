@@ -121,14 +121,26 @@ body.ant-scrolling-effect {
 .ant-modal-header {
   border-top-left-radius: 20px !important;
   border-top-right-radius: 20px !important;
-
+  border-bottom: 1px solid $border-color;
   .ant-modal-title {
     font-weight: 700 !important;
+    font-size: 18px;
+  }
+}
+
+.header-centered {
+  .ant-modal-title {
+    font-weight: 700 !important;
+    text-align: center !important;
   }
 }
 
 .ant-modal-content {
   border-radius: 20px !important;
+}
+
+.ant-modal-body {
+  padding: 20px 40px 30px 40px;
 }
 
 .MuiRadio-colorSecondary {

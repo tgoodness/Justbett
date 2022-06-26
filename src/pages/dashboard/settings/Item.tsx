@@ -14,11 +14,11 @@ const Icons = (type: string) => {
     case 'profile':
       return <Icon icon="bytesize:user" />;
     case 'edit-bank':
-      return <Icon icon="ant-design:bank-outlined"   />;
+      return <Icon icon="ant-design:bank-outlined" />;
     case 'change-pin':
-      return <Icon icon="vaadin:password" />;
-    case 'change-password':
       return <Icon icon="bx:bx-lock-alt" />;
+    case 'change-password':
+      return <Icon icon="gg:lock" />;
     case 'support':
       return <Icon icon="ant-design:customer-service-outlined" />;
   }

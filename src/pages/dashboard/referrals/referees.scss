@@ -1,0 +1,29 @@
+@import '../../../constant/index.scss';
+
+.invites {
+  text-align: center;
+
+  h6:nth-child(1) {
+    padding-top: 0;
+  }
+  h6 {
+    font-size: 15px;
+    font-weight: normal;
+    padding: 20px 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  h5 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 20px;
+
+    span {
+      color: $blue-color;
+      font-weight: 600;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

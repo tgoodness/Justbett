@@ -2,24 +2,22 @@ import { useState } from 'react';
 import { IMAGES } from '../../../../constant';
 
 type IFile = { preview: string; raw: File | null };
+
 function FormHandler() {
   const [image, setImage] = useState<IFile>({
     preview: IMAGES.emptyPhoto,
     raw: null,
   });
 
-  const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImage = (e: any) => {
     e.preventDefault();
 
     const reader = new FileReader();
-    const readyResult = <string>reader.result;
-    const file: File = (<FileList>(<HTMLInputElement>e.target).files)[0];
-
+    const file = e.target.files[0] ;
     reader.onloadend = () => {
       setImage({
-        ...image,
-        raw: file,
-        preview: readyResult,
+         raw: file,
+        preview: reader.result as string,
       });
     };
 
@@ -28,12 +26,8 @@ function FormHandler() {
     }
   };
 
-  const [dob, setDob] = useState('');
-  const handleDob = (date: any, dateString: string) => {
-    setDob(dateString);
-  };
 
-  return { image, handleImage, dob, handleDob };
+  return { image, handleImage};
 }
 
 export default FormHandler;

@@ -1,8 +1,8 @@
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import Select from '@mui/material/Select';
 import util from '../helpers/utils';
 
 type Props = {
@@ -16,18 +16,19 @@ type Props = {
   items: string[];
 };
 
-const SelectComponent = (prob: Props): JSX.Element => {
+const SelectComponent = (prob: Props) => {
   const { name, id, label, value, error = false, onChange, helperText, items, ...rest } = prob;
 
   return (
-    <FormControl className="text-field" variant="outlined">
-      <InputLabel id="demo-simple-select-helper-label">{label}</InputLabel>
+    <FormControl className="text-field">
+      <InputLabel id="demo-simple-select-label">{label}</InputLabel>
       <Select
-        labelId="demo-simple-select-helper-label"
+        labelId="demo-simple-select-label"
         id={id}
         value={value}
-        onChange={onChange}
+        label={label}
         name={name}
+        onChange={onChange}
         {...(error && { error: true })}
         {...rest}
       >

@@ -1,0 +1,61 @@
+@import '../../../../../constant/index.scss';
+
+.pool-play-station {
+  @extend %page-padding;
+  .header-background {
+    position: relative;
+
+    .content {
+      background-image: url('../../../../../assets/background/dashboard.png');
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      background-size: cover;
+      padding: 25px 30px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div:nth-child(1) {
+        h5 {
+          color: $white-color;
+          font-weight: 700;
+          margin-bottom: 3px;
+        }
+
+        h6 {
+          color: $white-color;
+          font-weight: 500;
+        }
+      }
+
+      div:nth-child(2) {
+        position: relative;
+
+        img {
+          position: absolute;
+          right: 20px;
+          top: -40px;
+        }
+
+         img:nth-child(2) {
+          position: absolute;
+          right: 5px;
+          top: -30px;
+        }
+      }
+    }
+  }
+
+  .stages-container{
+    h5{
+      text-align: center;
+    }
+    div{
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+}

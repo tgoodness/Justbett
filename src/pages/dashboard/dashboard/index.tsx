@@ -76,7 +76,7 @@ const Dashboard = () => {
             <div className="heading">
               <h5>Recent History</h5>
               <h6>
-                <Link to="/activity">More</Link>
+                <Link to="/history">More</Link>
               </h6>
             </div>
 

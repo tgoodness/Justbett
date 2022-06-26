@@ -1,21 +1,40 @@
 @import '../../../../constant/index.scss';
 
 .place-bet-soccer {
-  padding: 10px;
+  @extend %page-padding;
 
-  .page-background {
-    background-image: url('../../../../assets/background/dashboard.png');
-    background-repeat: no-repeat;
-    padding-top: 70px;
-    border-radius: 20px;
+  .header-background {
+    position: relative;
 
-    margin-bottom: 20px;
-    background-size: cover;
+    .content {
+      background-image: url('../../../../assets/background/dashboard.png');
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      background-size: cover;
 
-    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        position: relative;
+
+        img {
+          position: absolute;
+          right: 30px;
+          top: -50px;
+        }
+      }
+    }
+
+    .footer {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
       background: rgba(255, 255, 255, 0.8);
       padding: 10px 20px 5px 20px;
-
+    
       h5 {
         color: $black-color;
         font-weight: 700;
@@ -76,19 +95,6 @@
 
     .unchecked {
       color: transparent;
-    }
-  }
-
-  @media screen and(max-width: 767px) {
-    padding: 0 20px;
-    .page-background {
-      h5 {
-        font-size: 17px !important;
-      }
-
-      h6 {
-        font-size: 15px !important;
-      }
     }
   }
 }

@@ -1,3 +1,4 @@
+import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -5,7 +6,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 export type IColor = { id: string; name: string; icon: string };
-
 type Props = {
   name: string;
   id?: string;
@@ -14,10 +14,17 @@ type Props = {
   error?: boolean | undefined;
   onChange?: (e: any) => void;
   helperText?: string | boolean | undefined;
-    items: IColor[] | [];
+  items: IColor[] | [];
 };
 
+const useStyles = makeStyles(() => ({
+  icon: {
+    marginRight: '10px',
+  },
+}));
+
 const SelectColor = (props: Props) => {
+  const classes = useStyles();
   const { name, id, label, value, error = false, onChange, helperText, items } = props;
   return (
     <FormControl className="text-field">
@@ -34,7 +41,7 @@ const SelectColor = (props: Props) => {
         {items.map((item) => {
           return (
             <MenuItem key={item.id} value={item.id}>
-              <img src={item.icon} alt="Color Logo" width="15" className="mr-2" />
+              <img src={item.icon} alt="Color Logo" width="20" className={classes.icon} />
               {item.name}
             </MenuItem>
           );

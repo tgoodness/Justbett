@@ -4,6 +4,8 @@ export const goodness = require('./avater.jfif');
 export const ngn = require('./dashboard/ngn.png');
 export const ripple = require('./dashboard/ripple.png');
 export const loader = require('./dashboard/group/loader.png');
+export const referrals = require('./dashboard/referrals.png');
+
 
 // stones
 export const diamond = require('./dashboard/stones/diamond.png');
@@ -31,10 +33,19 @@ export const pool = require('./dashboard/games/pool.png');
 export const dice = require('./dashboard/games/dice.png');
 export const whot = require('./dashboard/games/whot.png');
 
+//games header
+export const ronaldo = require('./dashboard/footballers/ronaldo.png');
+export const joinedCircles = require('./dashboard/joined-circles.png');
+
 //colors
 export const red = require('./dashboard/colors/red.png');
 export const green = require('./dashboard/colors/green.png');
 export const blue = require('./dashboard/colors/blue.png');
+
+//colors
+export const redBall = require('./dashboard/pool/red.png');
+export const greenBall = require('./dashboard/pool/green.png');
+export const blueBall = require('./dashboard/pool/blue.png');
 
 export default {
   loader,
@@ -43,6 +54,9 @@ export default {
   goodness,
   ngn,
   ripple,
+  ronaldo,
+  joinedCircles,
+  referrals,
   diamond,
   emerald,
   iclas,
@@ -66,4 +80,7 @@ export default {
   red,
   green,
   blue,
+  redBall,
+  greenBall,
+  blueBall,
 };

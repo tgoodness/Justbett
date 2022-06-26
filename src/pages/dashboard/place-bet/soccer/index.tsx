@@ -5,14 +5,13 @@ import Header from '../../../../core-ui/dashboard/Header';
 import SelectPlayer from '../../../../components/select-player';
 import SelectCategory from '../../../../components/select-category';
 import SelectTeam from '../../../../components/SelectTeam';
+import Button from '../../../../components/buttons/TextButton';
 
 import confirmBetModalHandler from '../../../../hooks/useModalHandler';
-import addFriendModalHandler from '../../../../hooks/useModalHandler';
 import logicHandler from './core/LogicHandler';
 import formHandler from './core/FormHandler';
 
 import ConfirmBet from './confirm';
-import AddFriends from './add-friends';
 import { IMAGES } from '../../../../constant';
 import './style.scss';
 
@@ -94,23 +93,27 @@ function PlaceBet() {
 
   const { player, handlePlayer, category, handleCategory, team, handleTeam, selectedTeam } =
     formHandler(teams);
-  const { visible, showModal, handleCancel } = confirmBetModalHandler();
 
-  const {
-    visible: visibleA,
-    showModal: showModalA,
-    handleCancel: handleCancelA,
-  } = addFriendModalHandler();
+  const { visible, showModal, handleCancel } = confirmBetModalHandler();
 
   return (
     <>
       <Header title="Place Bet">
-        <h6>Place Bet</h6>
+        <h5>Place Bet</h5>
+        <Button label="Next" loading={false} onClick={showModal} />
       </Header>
       <Pageview>
         <div className="place-bet-soccer">
-          <div className="page-background">
-            <div>
+          <div className="header-background">
+            <div className="content">
+              <img src={IMAGES.ronaldo} alt="Ronaldo" width="150" />
+              <div>
+                <img src={IMAGES.joinedCircles} alt="Joined Circles" width="100" />
+                <img src={IMAGES.soccer} alt="Soccer" width="50" />
+              </div>
+            </div>
+
+            <div className="footer">
               <h5>Bet & Win Big</h5>
               <h6>Enjoy the game, happy friendship</h6>
             </div>
@@ -166,19 +169,9 @@ function PlaceBet() {
               </div>
             </div>
           )}
-
-          <div className="mt-4">
-            <button
-              className="btn btn-block btn-black"
-              onClick={category === 'group' ? showModalA : showModal}
-            >
-              {category === 'group' ? 'Continue' : 'Place Bet'}
-            </button>
-          </div>
         </div>
       </Pageview>
       <ConfirmBet visible={visible} handleCancel={handleCancel} />
-      <AddFriends visible={visibleA} handleCancel={handleCancelA} />
     </>
   );
 }

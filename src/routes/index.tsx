@@ -12,18 +12,25 @@ const ResetPassword = lazy(() => import('../pages/onboard/reset-password'));
 
 //Dashboard
 const Dashboard = lazy(() => import('../pages/dashboard/dashboard'));
-const Games = lazy(() => import('../pages/dashboard/games'));
-const ActiveGames = lazy(() => import('../pages/dashboard/ongoing-games'));
-const PlaceBetSoccer = lazy(() => import('../pages/dashboard/place-bet/soccer'));
-const PlaceBetColor = lazy(() => import('../pages/dashboard/place-bet/color'));
-const GameHistory = lazy(() => import('../pages/dashboard/game-history'));
-const GameDetails = lazy(() => import('../pages/dashboard/game-details'));
 const Withdraw = lazy(() => import('../pages/dashboard/withdraw'));
-
 const Settings = lazy(() => import('../pages/dashboard/settings'));
-const Support = lazy(() => import('../pages/dashboard/support'));
 const Profile = lazy(() => import('../pages/dashboard/profile/Profile'));
 const AddMoney = lazy(() => import('../pages/dashboard/add-money'));
+const Referrals = lazy(() => import('../pages/dashboard/referrals'));
+const Support = lazy(() => import('../pages/dashboard/support'));
+
+//Games
+const PlaceBetSoccer = lazy(() => import('../pages/dashboard/place-bet/soccer'));
+const PlaceBetColor = lazy(() => import('../pages/dashboard/place-bet/color'));
+const PlaceBetPool = lazy(() => import('../pages/dashboard/place-bet/pool'));
+const PoolPlayStation = lazy(() => import('../pages/dashboard/place-bet/pool/play-station/index'));
+
+//Game
+const Games = lazy(() => import('../pages/dashboard/games'));
+const ActiveGames = lazy(() => import('../pages/dashboard/ongoing-games'));
+const GameHistory = lazy(() => import('../pages/dashboard/game-history'));
+const GameDetails = lazy(() => import('../pages/dashboard/game-details'));
+
 const BankTransfer = lazy(() => import('../pages/dashboard/add-money/bank-transfer'));
 const Card = lazy(() => import('../pages/dashboard/add-money/card'));
 
@@ -32,8 +39,7 @@ const GroupInfo = lazy(() => import('../pages/dashboard/group/play-station/group
 const PlayStation = lazy(() => import('../pages/dashboard/group/play-station'));
 const PageNotFound = lazy(() => import('../components/error-page/NotFound'));
 
-const Index = (): JSX.Element => {
-  //Switch viewport
+const Index = () => {
   const [width] = useWindowSize();
   const GameComponent = width < 767 ? ActiveGames : Dashboard;
 
@@ -101,16 +107,52 @@ const Index = (): JSX.Element => {
           </Route>
 
           <Route
-            path="color/:playerId?/:catoryId?"
+            path="place-bet/color"
             element={
               <Private>
                 <PlaceBetColor />
               </Private>
             }
+          >
+            <Route
+              path=":categoryId"
+              element={
+                <Private>
+                  <PlaceBetColor />
+                </Private>
+              }
+            />
+
+            <Route
+              path=""
+              element={
+                <Private>
+                  <PlaceBetColor />
+                </Private>
+              }
+            />
+          </Route>
+
+          <Route
+            path="place-bet/pool"
+            element={
+              <Private>
+                <PlaceBetPool />
+              </Private>
+            }
           />
 
           <Route
-            path="/game-history"
+            path="place-bet/pool/play-station"
+            element={
+              <Private>
+                <PoolPlayStation />
+              </Private>
+            }
+          />
+
+          <Route
+            path="/history"
             element={
               <Private>
                 <GameHistory />
@@ -212,6 +254,15 @@ const Index = (): JSX.Element => {
             element={
               <Private>
                 <Support />
+              </Private>
+            }
+          />
+
+          <Route
+            path="/referrals"
+            element={
+              <Private>
+                <Referrals />
               </Private>
             }
           />

@@ -45,6 +45,7 @@ function Sidebar() {
       },
     },
   ];
+
   const { searchTerm, handleSearch, inputRef, handleClear, isSearch, toggleSearch, searchResults } =
     searchLogic(groups);
 

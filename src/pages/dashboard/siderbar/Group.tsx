@@ -4,9 +4,11 @@ import { IGroup } from '../../../interfaces/game';
 
 export default function Group(props: IGroup) {
   const { id, remaining, gameType, category } = props;
+  const url =
+    gameType === 'color' ? `/place-bet/color/${category.id}` : `/place-bet/soccer/${id}/${category.id}`;
 
   return (
-    <Link to={`/place-bet/${gameType}/${id}/${category.id}`} className="link">
+    <Link to={url} className="link">
       <div className="game-wrapper">
         <div className="game-info">
           <img src={category.icon} alt="Category Icon" width="45" height="45" />

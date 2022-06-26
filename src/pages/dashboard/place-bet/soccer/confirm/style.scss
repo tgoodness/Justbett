@@ -1,0 +1,47 @@
+@import '../../../../../constant/index.scss';
+
+.confirm-place-bet {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        margin-right: 10px;
+      }
+
+      svg {
+        font-size: 45px;
+        color: $blue-color;
+        margin-right: 10px;
+      }
+
+      h5 {
+        font-size: 17px;
+        color: $black-color;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+
+      h6 {
+        font-size: 13px;
+        color: $grey-color;
+        text-align: left;
+      }
+    }
+  }
+
+  .btn-container {
+    margin-top: 30px;
+    button {
+      padding: 8px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+  }
+}

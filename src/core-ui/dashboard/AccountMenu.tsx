@@ -19,7 +19,7 @@ type Props = {
   handleClose: any;
 };
 
-const MenuItems = (props: Props): JSX.Element => {
+const MenuItems = (props: Props) => {
   const { anchorEl, handleClose } = props;
   const { visible, showModal, handleCancel } = modalHandler(handleClose);
 

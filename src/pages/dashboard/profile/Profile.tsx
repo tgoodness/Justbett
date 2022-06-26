@@ -1,87 +1,96 @@
-import { CopyOutlined } from '@ant-design/icons';
-import { Image } from 'antd';
-import { DatePicker } from 'antd';
-import moment from 'moment';
-
+import { LoadingOutlined } from '@ant-design/icons';
+import { Icon } from '@iconify/react';
 import Pageview from '../../../core-ui/dashboard/Pageview';
 import Header from '../../../core-ui/dashboard/Header';
-import Input from '../../../components/InputFilled';
-import Select from '../../../components/Select';
+import Button from '../../../components/buttons/TextButton';
+
+import EditProfile from './Edit';
 import formHandler from './core/FormHandler';
-import '../../../style/dashboard/profile.scss';
+import modalHandler from '../../../hooks/useModalHandler';
+import './style.scss';
+import { Link } from 'react-router-dom';
 
 function Profile() {
-  const { image, handleImage, handleDob } = formHandler();
-  const defaultDOB = '05/05/2000';
-
+  const { image, handleImage } = formHandler();
+  const { visible, showModal, handleCancel } = modalHandler();
+  const loading = false;
   return (
     <>
       <Header title="Profile">
-        <h6>Profile</h6>
+        <h5>Profile</h5>
+        <Button label="Edit" onClick={showModal} />
       </Header>
       <Pageview>
         <div className="profile">
-          <div className="image-wrapper">
-            <div>
-              <Image src={image.preview} alt="User Picture" sizes="100" />
+          <div className="content-header">
+            <div className="upload">
+              <label>
+                <div className="mask-icon">
+                  {loading ? (
+                    <LoadingOutlined className="upload-spinner" />
+                  ) : (
+                    <Icon icon="ic:outline-add-a-photo" className="upload-icon" />
+                  )}
+                </div>
+                <img src={image.preview} alt="User Picture" />
+                <input type="file" className="d-none" onChange={handleImage} />
+              </label>
             </div>
-            <label>
-              <h5>Upload Photo</h5>
-              <input type="file" className="d-none" onChange={handleImage} />
-            </label>
-            <h6>
-              teegoodness <CopyOutlined />
-            </h6>
+
+            <div className="info">
+              <div>
+                <h5>Goodness</h5>
+                <h6>Bank Details, Security</h6>
+              </div>
+              <Link to="/settings">
+                <Icon icon="fluent:chevron-right-28-filled" height="28" />
+              </Link>
+            </div>
           </div>
 
-          <>
-            <div className="data">
-              <Input name="firstName" id="firstName" value="" label="First Name" />
+          <div className="content-body">
+            <div className="item">
+              <Icon icon="bytesize:user" />
+              <div>
+                <h5>Akinyemi Tobiloba </h5>
+                <h6>First Name</h6>
+              </div>
             </div>
 
-            <div className="data">
-              <Input name="lastName" id="lastName" value="" label="Last Name" />
+            <div className="item">
+              <Icon icon="mdi-light:email" />
+              <div>
+                <h5>goodnesstek@gmail.com</h5>
+                <h6>Email Address</h6>
+              </div>
             </div>
 
-            <div className="data">
-              <Select
-                name="city"
-                id="city"
-                value=""
-                label="State/City"
-                items={['Osun', 'Lagos', 'Delta']}
-              />
+            <div className="item">
+              <Icon icon="fluent:call-28-regular" />
+              <div>
+                <h5>08068694950</h5>
+                <h6>Phone Number</h6>
+              </div>
+            </div>
+            <div className="item">
+              <Icon icon="healthicons:ui-user-profile-outline" />
+              <div>
+                <h5>Male</h5>
+                <h6>Gender</h6>
+              </div>
             </div>
 
-            <div className="data">
-              <Input name="phoneNumber" id="phoneNumber" value="" label="Phone Number" />
+            <div className="item">
+              <Icon icon="bytesize:location" />
+              <div>
+                <h5>Osun</h5>
+                <h6>State</h6>
+              </div>
             </div>
-
-            <div className="data">
-              <Select
-                name="gender"
-                id="gender"
-                value=""
-                label="Gender"
-                items={['Male', 'Female']}
-              />
-            </div>
-
-            <div className="data">
-              <DatePicker
-                format="MM/DD/YYYY"
-                placeholder="Date of Birth"
-                {...(defaultDOB !== null && { defaultValue: moment(defaultDOB, 'MM/DD/YYYY') })}
-                onChange={handleDob}
-              />
-            </div>
-
-            <div className="mt-4">
-              <button className="btn btn-black  btn-block ">Save</button>
-            </div>
-          </>
+          </div>
         </div>
       </Pageview>
+      <EditProfile visible={visible} handleCancel={handleCancel} />
     </>
   );
 }

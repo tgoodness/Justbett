@@ -1,0 +1,41 @@
+@import '../../../constant/index.scss';
+
+.games-page {
+  @extend %page-padding;
+
+  .games {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .game {
+    border: 1px solid $faint-color;
+    text-align: center;
+
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 0.460669px solid #dbdbdb;
+    filter: drop-shadow(0px 0px 2.76401px rgba(82, 80, 80, 0.25));
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      transition: all 0.5s linear !important;
+    }
+  }
+
+  .game:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  h6 {
+    margin-top: 20px;
+    font-weight: 600;
+    color: $black-color;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}

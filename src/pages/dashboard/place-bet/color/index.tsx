@@ -1,27 +1,20 @@
 import { useParams } from 'react-router';
 import Pageview from '../../../../core-ui/dashboard/Pageview';
 import Header from '../../../../core-ui/dashboard/Header';
-import SelectPlayer from '../../../../components/select-player';
 import SelectCategory from '../../../../components/select-category';
 import SelectColor from '../../../../components/SelectColor';
-import confirmBetModalHandler from '../../../../hooks/useModalHandler';
-import addFriendModalHandler from '../../../../hooks/useModalHandler';
-import formHandler from './core/FormHandler';
+import Button from '../../../../components/buttons/TextButton';
 
+import confirmBetModalHandler from '../../../../hooks/useModalHandler';
+import formHandler from './core/FormHandler';
 import ConfirmBet from './confirm';
-import AddFriends from './add-friends';
 import { IMAGES } from '../../../../constant';
 import './style.scss';
 
 function PlaceBet() {
-  const { playerId, categoryId } = useParams();
-  const { player, handlePlayer, category, handleCategory, color, handleColor } = formHandler();
+  const { categoryId } = useParams();
+  const {category, handleCategory, color, handleColor } = formHandler();
 
-  const players = [
-    { id: '1', label: '3 Users', user: '3' },
-    { id: '2', label: '5 Users', user: '5' },
-    { id: '3', label: 'Play With Friends', user: 'group' },
-  ];
 
   const categories = [
     {
@@ -66,35 +59,28 @@ function PlaceBet() {
   ];
 
   const { visible, showModal, handleCancel } = confirmBetModalHandler();
-  const {
-    visible: visibleA,
-    showModal: showModalA,
-    handleCancel: handleCancelA,
-  } = addFriendModalHandler();
 
   return (
     <>
       <Header title="Place Bet">
-        <h6>Ongoing Games</h6>
+        <h5>Place Bet</h5>
+        <Button label="Next" loading={false} onClick={showModal} />
       </Header>
       <Pageview>
         <div className="place-bet-color">
-          <div className="page-background">
-            <div>
+          <div className="header-background">
+            <div className="content">
+              <img src={IMAGES.color} alt="Color" width="100" />
+              <img src={IMAGES.joinedCircles} alt="Joined Circles" width="100" />
+            </div>
+
+            <div className="footer">
               <h5>Bet & Win Big</h5>
               <h6>Enjoy the game, happy friendship</h6>
             </div>
           </div>
 
-          <SelectPlayer
-            name="player"
-            id="player"
-            label="Player"
-            value={player}
-            onChange={handlePlayer}
-            items={players}
-            playerId={playerId}
-          />
+        
 
           <SelectCategory
             name="category"
@@ -114,19 +100,9 @@ function PlaceBet() {
             onChange={handleColor}
             items={colors}
           />
-
-          <div className="mt-4">
-            <button
-              className="btn btn-block btn-black"
-              onClick={category === 'group' ? showModalA : showModal}
-            >
-              {category === 'group' ? 'Continue' : 'Place Bet'}
-            </button>
-          </div>
         </div>
       </Pageview>
       <ConfirmBet visible={visible} handleCancel={handleCancel} />
-      <AddFriends visible={visibleA} handleCancel={handleCancelA} />
     </>
   );
 }

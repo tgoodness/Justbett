@@ -1,3 +1,4 @@
+import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -17,7 +18,20 @@ type Props = {
   items: ITeam[];
 };
 
+const useStyles = makeStyles(() => ({
+  teamAIcon: {
+    marginRight: 5,
+  },
+  teamBIcon: {
+    marginRight: 5,
+  },
+  delimiter: {
+    marginLeft: 5,
+    marginRight: 5,
+  },
+}));
 const SelectTeam = (props: Props): JSX.Element => {
+  const classes = useStyles();
   const { name, id, label, value, error = false, onChange, helperText, items } = props;
 
   return (
@@ -35,10 +49,20 @@ const SelectTeam = (props: Props): JSX.Element => {
         {items.map((item) => {
           return (
             <MenuItem key={util.randomNumber() + item.peerId} value={item.peerId}>
-              <img src={item.teamA.icon} alt="Team A Logo" width="15" className="mr-2" />
+              <img
+                src={item.teamA.icon}
+                alt="Team A Logo"
+                width="18"
+                className={classes.teamAIcon}
+              />
               {item.teamA.name}
-              <span className="mr-3 ml-3">-</span>
-              <img src={item.teamB.icon} alt="Team B Logo" width="15" className="mr-2" />
+              <span className={classes.delimiter}>-</span>
+              <img
+                src={item.teamB.icon}
+                alt="Team B Logo"
+                width="18"
+                className={classes.teamBIcon}
+              />
               {item.teamB.name}
             </MenuItem>
           );

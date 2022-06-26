@@ -1,3 +1,4 @@
+import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -16,7 +17,14 @@ type Props = {
   items: ICategory[] | [];
 };
 
+const useStyles = makeStyles(() => ({
+  icon: {
+    marginRight: '10px',
+  },
+}));
+
 const SelectCategory = (props: Props) => {
+  const classes = useStyles();
   const { name, id, label, value, error = false, onChange, helperText, items } = props;
 
   return (
@@ -34,7 +42,7 @@ const SelectCategory = (props: Props) => {
         {items.map((item) => {
           return (
             <MenuItem key={item.id} value={item.id}>
-              <img src={item.icon} alt="Category Icon" width="15" className="mr-1" />
+              <img src={item.icon} alt="Category Icon" width="20" className={classes.icon} />
               {item.name}
               <span> ({item.amount})</span>
             </MenuItem>

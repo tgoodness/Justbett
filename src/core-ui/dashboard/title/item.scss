@@ -1,0 +1,33 @@
+@import '../../../constant/index.scss';
+
+.game-menu {
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    width: 350px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h6 {
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 0;
+        margin-left: 15px;
+        margin-right: 10px;
+      }
+    }
+
+    svg {
+      color: $green-color;
+      font-size: 20px;
+    }
+  }
+}

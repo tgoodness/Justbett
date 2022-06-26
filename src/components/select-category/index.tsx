@@ -11,7 +11,7 @@ type Props = {
   onChange?: (e: any) => void;
   helperText?: string | boolean | undefined;
   items: ICategory[] | [];
-  categoryId: string | undefined;
+  categoryId?: string | undefined;
 };
 
 function index(props: Props) {

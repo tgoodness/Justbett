@@ -6,7 +6,7 @@ const OngoingGames = () => {
   return (
     <>
       <Header title="Ongoing Games">
-        <h6>Ongoing Games</h6>
+        <h5>Ongoing Games</h5>
       </Header>
       <Pageview>
         <Sidebar />

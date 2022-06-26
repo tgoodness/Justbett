@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import Pageview from '../../../core-ui/dashboard/Pageview';
 import Header from '../../../core-ui/dashboard/Header';
 import bankModalHandler from '../../../hooks/useModalHandler';
@@ -9,8 +8,9 @@ import pinModalHandler from '../../../hooks/useModalHandler';
 import UpdateBank from './edit-bank';
 import ChangePassword from './change-password';
 import ChangePin from './change-pin';
-import './style.scss';
 import Item from './Item';
+import './style.scss';
+
 
 function Settings() {
   const {
@@ -39,7 +39,10 @@ function Settings() {
 
       <Pageview>
         <div className="settings">
-          <Item label="Referrals" type="referrals" showModal={showModalB} />
+          <Link to="/referrals">
+            <Item label="Referrals" type="referrals" />
+          </Link>
+        
           <Link to="/profile">
             <Item label="Profile" type="profile" />
           </Link>
