@@ -40,6 +40,7 @@ const ChangePassword = (props: Props) => {
           helperText={currentPassword.helperText}
           onClick={handleClick}
           onMouseDown={handleMouseDown}
+          
         />
 
         <Input

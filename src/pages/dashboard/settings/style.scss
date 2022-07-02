@@ -1,9 +1,15 @@
 @import '../../../constant/index.scss';
 
 .settings {
-  padding-top: 20px;
+  @media screen and(min-width: 767px) {
+    padding-top: 20px;
+  }
+
   .item {
     @extend %page-padding;
+    @media screen and(min-width: 767px) {
+      padding-right: 0 !important;
+    }
     padding-top: 10px;
     display: flex;
     align-items: flex-start;

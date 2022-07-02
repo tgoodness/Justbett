@@ -16,6 +16,7 @@
     .page-title {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       svg {
         color: $black-color;
         &:hover {
@@ -29,6 +30,9 @@
         margin-left: 20px;
         font-weight: 600;
         color: $black-color;
+        @media screen and (max-width: 900px) {
+          font-size: 17px;
+        }
       }
     }
     img {
@@ -40,6 +44,24 @@
       &:hover {
         cursor: pointer;
       }
+    }
+  }
+
+  .sm-appbar {
+    display: flex;
+    align-items: center;
+    svg {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    div {
+      flex: 1;
+      margin-left: 15px;
+    }
+
+    h5 {
+      margin-left: 0;
     }
   }
 }

@@ -46,6 +46,7 @@ export const blue = require('./dashboard/colors/blue.png');
 export const redBall = require('./dashboard/pool/red.png');
 export const greenBall = require('./dashboard/pool/green.png');
 export const blueBall = require('./dashboard/pool/blue.png');
+export const yellowBall = require('./dashboard/pool/yellow.png');
 
 export default {
   loader,
@@ -83,4 +84,5 @@ export default {
   redBall,
   greenBall,
   blueBall,
+  yellowBall,
 };

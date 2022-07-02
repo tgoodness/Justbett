@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Badge } from '@material-ui/core';
 import { IGroup } from '../../../interfaces/game';
 
-export default function Group(props: IGroup) {
+export default function Item(props: IGroup) {
   const { id, remaining, gameType, category } = props;
   const url =
     gameType === 'color' ? `/place-bet/color/${category.id}` : `/place-bet/soccer/${id}/${category.id}`;

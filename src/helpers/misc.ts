@@ -93,8 +93,20 @@ const misc = {
 
   mainContent(): number {
     const height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-    if (this.isMobileView()) return height - 50;
-    else return height - 140;
+    if (this.isMobileView()) return height;
+    else return height - 250;
+  },
+
+  shuffle(array: Array<string>) {
+    let currentIndex = array.length,
+      randomIndex;
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
   },
 };
 

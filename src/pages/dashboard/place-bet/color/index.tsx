@@ -62,7 +62,7 @@ function PlaceBet() {
 
   return (
     <>
-      <Header title="Place Bet">
+      <Header title="Place Bet" isImage={false}>
         <h5>Place Bet</h5>
         <Button label="Next" loading={false} onClick={showModal} />
       </Header>

@@ -56,12 +56,12 @@ function Confirm(props: Props) {
         </div>
         <div className="btn-container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-6">
               <button className="btn btn-outlined-black btn-block" onClick={handleCancel}>
                 Cancel
               </button>
             </div>
-            <div className="col-md-6">
+            <div className="col-6">
               <button className="btn btn-black btn-block">Confirm</button>
             </div>
           </div>

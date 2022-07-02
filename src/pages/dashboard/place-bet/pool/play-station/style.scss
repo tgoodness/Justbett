@@ -39,22 +39,28 @@
           top: -40px;
         }
 
-         img:nth-child(2) {
+        img:nth-child(2) {
           position: absolute;
           right: 5px;
           top: -30px;
+          padding: 10px !important;
+          background: rgba(0, 0, 0, 0.2);
+          border-radius: 30px;
         }
       }
     }
   }
 
-  .stages-container{
-    h5{
-      text-align: center;
-    }
-    div{
+  .choose-prediction {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .balls-container {
+    div {
       display: flex;
       justify-content: center;
+      align-items: center;
       margin-top: 20px;
     }
   }

@@ -9,7 +9,7 @@ import { IMAGES } from '../../../constant';
 const Withdraw = () => {
   return (
     <>
-      <Header title="Withdraw">
+      <Header title="Withdraw" isImage={false}>
         <h5>Withdraw</h5>
         <Button loading={false} label="Next" />
       </Header>

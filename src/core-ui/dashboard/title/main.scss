@@ -2,9 +2,13 @@
 
 .main-heading {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
   align-items: center;
-  padding: 12px 20px;
+  padding: 8px 20px;
+
+  @media screen and (max-width: 900px) {
+    padding: 5px 0;
+  }
 
   h5 {
     font-size: 17px;

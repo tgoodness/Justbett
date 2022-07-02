@@ -19,6 +19,8 @@ function SearchBar(props: IOngoingGroupSearchBar) {
             ref={inputRef}
             value={searchTerm}
             onChange={handleSearch}
+            autoComplete="off"
+            autoFocus={false}
           />
         </div>
         {searchTerm && <Close className="close-icon" onClick={handleClear} />}

@@ -1,88 +1,60 @@
-import { Badge } from '@material-ui/core';
 import { IMAGES } from '../../../constant';
 import Pageview from '../../../core-ui/dashboard/Pageview';
 import Header from '../../../core-ui/dashboard/Header';
+import ColorItem from './ColorItem';
+// import SoccerItem from './SoccerItem';
 import './style.scss';
 
 const GameDetails = () => {
+  // const data = [
+  //   {
+  //     teamA: { icon: IMAGES.ARS, name: 'ARS', goals: 5, predicted: true },
+  //     teamB: { icon: IMAGES.MAN, name: 'MAN', goals: 1, predicted: false },
+  //     points: 4,
+  //     postion: '1st',
+  //     username: 'Goodness',
+  //     location: 'Lagos, Nigeria',
+  //   },
+  //   {
+  //     teamA: { icon: IMAGES.CHE, name: 'CHE', goals: 2, predicted: false },
+  //     teamB: { icon: IMAGES.LIV, name: 'LIV', goals: 1, predicted: true },
+  //     points: 1,
+  //     postion: '2nd',
+  //     username: 'Raphael',
+  //     location: 'Osun, Nigeria',
+  //   },
+  // ];
+
+  const data = [
+    { icon: IMAGES.red, name: 'Red', won: true, predicted: true },
+    { icon: IMAGES.green, name: 'Green', won: false, predicted: false },
+    { icon: IMAGES.blue, name: 'Blue', won: false, predicted: false },
+  ];
   return (
     <>
       <Header title="Game Details">
-        <h6>Game Details</h6>
+        <h5>Game Details</h5>
       </Header>
       <Pageview>
         <div className="game-details">
-          <div className="user-position">
-            <div className="package-name">
-              <h5>
-                <span className="mr-2">Diamond</span> <Badge badgeContent={3} color="secondary" />
-              </h5>
-              <h6>JB374558332</h6>
-            </div>
-            <img src={IMAGES.CHE} alt="Team Logo" width="100" height="100" />
-            <div className="winning-details">
-              <h5>N3,000.00</h5>
-              <h6>
-                <span>Won</span>
-              </h6>
+          <div className="header-background">
+            <div className="content">
+              <div>
+                <h5>Diamond</h5>
+                <h6>N100.00</h6>
+              </div>
+              <div>
+                <img src={IMAGES.joinedCircles} alt="Joined Circles" width="100" />
+                <img src={IMAGES.color} alt="Soccer" width="70" />
+              </div>
             </div>
           </div>
 
-          <h5 className="result-header">Result</h5>
-          <div className="result">
-            <div className="user-info">
-              <h5>TeeGoodness</h5>
-              <h6>Osun, Nigeria</h6>
-            </div>
-            <div className="winning">
-              <h6>1st</h6>
-              <h5>N3,000.00</h5>
-            </div>
-            <div className="point">
-              <h5>
-                <span className="team">CHE</span>
-                <span className="teams-result">0-5</span>
-                <span className="team selected">MAN</span>
-              </h5>
-              <h6>5points</h6>
-            </div>
-          </div>
-          <div className="result">
-            <div className="user-info">
-              <h5>TeeGoodness</h5>
-              <h6>Osun, Nigeria</h6>
-            </div>
-            <div className="winning">
-              <h6>1st</h6>
-              <h5>N3,000.00</h5>
-            </div>
-            <div className="point">
-              <h5>
-                <span className="team">CHE</span>
-                <span className="teams-result">0-5</span>
-                <span className="team selected">MAN</span>
-              </h5>
-              <h6>5points</h6>
-            </div>
-          </div>
-          <div className="result">
-            <div className="user-info">
-              <h5>TeeGoodness</h5>
-              <h6>Osun, Nigeria</h6>
-            </div>
-            <div className="winning">
-              <h6>1st</h6>
-              <h5>N3,000.00</h5>
-            </div>
-            <div className="point">
-              <h5>
-                <span className="team">CHE</span>
-                <span className="teams-result">0-5</span>
-                <span className="team selected">MAN</span>
-              </h5>
-              <h6>5points</h6>
-            </div>
-          </div>
+          <h4>Result (5 Players)</h4>
+
+          {data.map((item, i) => {
+            return <ColorItem item={item} key={i} />;
+          })}
         </div>
       </Pageview>
     </>

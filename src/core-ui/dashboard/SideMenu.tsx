@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '@material-ui/core/Menu';
+import Menu from '@mui/material/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
 
@@ -34,6 +34,10 @@ const MenuItems = (props: Props): JSX.Element => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
         className="side-menu"
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
       >
         <div className="country-logo-wrapper">
           <img src={IMAGES.ngn} alt="Country Logo" />
@@ -51,8 +55,8 @@ const MenuItems = (props: Props): JSX.Element => {
             </MenuItem>
           </Link>
         )}
-       
-        <Link to="/game-history">
+
+        <Link to="/history">
           <MenuItem>
             <ScheduleOutlined />
             Game History

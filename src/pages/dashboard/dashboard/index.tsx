@@ -60,7 +60,7 @@ const Dashboard = () => {
 
             <div className="navigation-links">
               <h6>
-                <Link to="/withdraw">
+                <Link to="/add-money">
                   <span>Add Money</span>
                 </Link>
               </h6>

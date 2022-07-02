@@ -1,7 +1,7 @@
 import misc from '../../../helpers/misc';
 import { IMAGES } from '../../../constant';
 import { IGroup } from '../../../interfaces/game';
-import Group from './Group';
+import Item from './Item';
 import SearchBar from './SearchBar';
 import searchLogic from './core/SearchLogic';
 import './style.scss';
@@ -66,7 +66,7 @@ function Sidebar() {
       >
         {searchResults.map((item: IGroup, index: number) => {
           return (
-            <Group
+            <Item
               id={item.id}
               remaining={item.remaining}
               gameType={item.gameType}

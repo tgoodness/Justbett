@@ -1,6 +1,6 @@
 import React from 'react';
 import SideBar from '../../pages/dashboard/siderbar';
-import misc from '../../helpers/misc';
+import useWindowSize from '../../helpers/UseWindowSize';
 import './style/pageview.scss';
 
 type Props = {
@@ -8,7 +8,9 @@ type Props = {
 };
 
 const Pageview = (props: Props) => {
+  const [width] = useWindowSize();
   const { children } = props;
+
   return (
     <>
       <div className="page-container">
@@ -17,7 +19,7 @@ const Pageview = (props: Props) => {
             <SideBar />
           </div>
           <div className="main animate__animated animate__fadeIn animate__slow">
-            <div id="scrollbar" style={{ maxHeight: misc.mainContent() - 115 }}>
+            <div id="scrollbar" style={width > 767 ? { maxHeight: '100%' } : {}}>
               {children}
             </div>
           </div>

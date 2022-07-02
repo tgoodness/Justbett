@@ -48,7 +48,7 @@ const History = () => {
 
   return (
     <>
-      <Header title="History">
+      <Header title="History" isImage={false}>
         <h5>History</h5>
         <Icon icon="akar-icons:filter" className="filter-icon" />
       </Header>

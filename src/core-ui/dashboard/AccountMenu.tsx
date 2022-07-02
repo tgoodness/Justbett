@@ -1,16 +1,9 @@
-import Menu from '@material-ui/core/Menu';
+import Menu from '@mui/material/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
 import { PopoverProps } from '@material-ui/core';
+import { AccountBalanceWalletOutlined, SettingsOutlined } from '@material-ui/icons';
 
-import {
-  PeopleAltOutlined,
-  AccountBalanceWalletOutlined,
-  SettingsOutlined,
-} from '@material-ui/icons';
-
-import modalHandler from '../../hooks/useModalWithParams';
-import Groups from '../../pages/dashboard/group/settings/groups';
 import { IMAGES } from '../../constant';
 import './style/account-menu.scss';
 
@@ -21,7 +14,6 @@ type Props = {
 
 const MenuItems = (props: Props) => {
   const { anchorEl, handleClose } = props;
-  const { visible, showModal, handleCancel } = modalHandler(handleClose);
 
   return (
     <div>
@@ -32,6 +24,10 @@ const MenuItems = (props: Props) => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
         className="account-menu"
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
       >
         <Link to="/profile">
           <MenuItem>
@@ -45,11 +41,6 @@ const MenuItems = (props: Props) => {
           </MenuItem>
         </Link>
 
-        <Link to="#">
-          <MenuItem onClick={showModal}>
-            <PeopleAltOutlined /> Groups
-          </MenuItem>
-        </Link>
         <Link to="/add-money">
           <MenuItem>
             <AccountBalanceWalletOutlined />
@@ -66,8 +57,6 @@ const MenuItems = (props: Props) => {
 
         <div className="logout">Log Out</div>
       </Menu>
-
-      <Groups visible={visible} handleCancel={handleCancel} />
     </div>
   );
 };

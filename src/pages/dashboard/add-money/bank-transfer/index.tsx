@@ -7,7 +7,7 @@ import './style.scss';
 function BankTransfer() {
   return (
     <>
-      <Header title="Bank Transfer">
+      <Header title="Bank Transfer"  isBack={true}>
         <h5>Bank Transfer</h5>
       </Header>
       <Pageview>

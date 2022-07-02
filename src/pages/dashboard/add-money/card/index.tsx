@@ -11,7 +11,7 @@ function Card() {
 
   return (
     <>
-      <Header title="Card">
+      <Header title="Card" isImage={false} isBack={true}>
         <h5>Card</h5>
         <Button label="Next" />
       </Header>
